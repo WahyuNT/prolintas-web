@@ -31,10 +31,10 @@
 
     </div>
 
-    <section class="py-5" style="background: linear-gradient(360deg, #F8F8F8 0%, #F8F8F8 100%)">
-        <div class="d-flex justify-content-center">
-            <div class="col-6">
-                <div class="card pt-4 pb-3 px-4 border-0" style="border-radius: 15px">
+    <section class="py-5" style="background: linear-gradient(360deg, #FCFCFC 0%, #F8F8F8 100%)">
+        <div class="d-flex justify-content-center py-5">
+            <div class="col-6 py-5">
+                <div class="card shadow-sm pt-4 pb-3 px-4 border-0" style="border-radius: 15px">
 
                     <h2 class="text-primary fw-bold">Cek Resi</h2>
                     <div class="card-body px-0 d-flex justify-content-between flex-wrap">
@@ -58,8 +58,46 @@
             </div>
         </div>
     </section>
+    <section class="pt-5 container" style="background-color: #FCFCFC">
+        <h2 class="text-center mt-3 fw-bold color-primary mb-5"><span style="border-radius: 8px"
+                class="bg-primary color-secondary px-2 py-1 ">About</span> Us</h2>
+
+        <div class="d-flex flex-wrap justify-content-between align-items-start pt-3">
+            <div class="col-4 text-center">
+                <img class="img-fluid" style="height: 300px" src="{{ asset('image/img.png') }}" alt="">
+            </div>
+            <div class="col-7">
+                <h2 class="fw-bold">
+                    International Freight Forwarder
+                </h2>
+                <h5>
+                    Lorem ipsum dolor sit amet consectetur. In ac non massa vulputate. Augue tincidunt lacus etiam purus
+                    arcu ultrices ultricies lectus risus. Nunc risus arcu sit feugiat purus egestas. Id adipiscing
+                    mattis amet sagittis in sit consequat dolor.
+                </h5>
+            </div>
+        </div>
+    </section>
 
 
+    <section style="padding-top: 240px">
+
+        <div class="mt-5 pt-3" style="position: relative;">
+
+            <div style="position: absolute; bottom: 0; left: 0;" class="wave wave-1"></div>
+            <div style="position: absolute; bottom: 0; left: 0;" class="wave wave-2"></div>
+            <div style="position: absolute; bottom: 0; left: 0;" class="wave wave-3"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-center mt-3 fw-bold color-primary mb-5">Our <span style="border-radius: 8px"
+                class="bg-primary color-secondary px-2 py-1 ">Services</span></h2>
+    </section>
+
+    <div class="mt-5 mb-5">
+        <br class="mb-5">
+    </div>
     <x-script />
 </body>
 
