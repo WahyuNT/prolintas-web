@@ -131,3 +131,10 @@ body {
     color: black;
     box-shadow: 1px 1px 5px 1px #adadad10;
 }
+
+.borad-20{
+    border-radius: 20px;
+}
+.borad-15{
+    border-radius: 15px;
+}

@@ -93,7 +93,7 @@
     <section>
         <div class="container pt-3 pb-5">
 
-            <h2 class="text-center  fw-bold color-primary ">Our <span style="border-radius: 8px"
+            <h2 class="text-center  fw-bold color-primary mb-5">Our <span style="border-radius: 8px"
                     class="bg-primary color-secondary px-2 py-1 ">Services</span></h2>
 
             <div class="d-flex flex-wrap justify-content-center">
@@ -222,8 +222,7 @@
 
     <section>
         <div class="container">
-
-            <div class="card shadow-sm border-0" style="border-radius: 20px">
+            <div class="card shadow-sm border-0 mb-5" style="border-radius: 20px">
                 <div class="card-body">
                     <h2 class="text-center mt-5 fw-bold color-primary mb-5"><span style="border-radius: 8px"
                             class="bg-primary color-secondary px-2 py-1 ">Help</span> Centre</h2>
@@ -233,7 +232,7 @@
                             <img class="img-fluid w-75" src="{{ asset('image/faq.png') }}" alt="">
                         </div>
                         <div class="col-7">
-                            <div class="card px-1  py-1"style="background-color: #F3F3F3;border-radius: 12px" >
+                            <div class="card px-1  py-1"style="background-color: #F3F3F3;border-radius: 12px">
                                 <div class="d-flex  flex-wrap align-items-center">
 
                                     <div class=" text-start ps-2">
@@ -249,9 +248,10 @@
                                 <div class="accordion accordion-flush" id="accordionFlushExample">
                                     <div class="accordion-item border border-2" style="border-radius: 12px">
                                         <h2 class="accordion-header">
-                                            <button style="border-radius: 12px" class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                                aria-expanded="false" aria-controls="flush-collapseOne">
+                                            <button style="border-radius: 12px" class="accordion-button collapsed"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                                aria-controls="flush-collapseOne">
                                                 Accordion Item #1
                                             </button>
                                         </h2>
@@ -262,8 +262,55 @@
                                                 is the first item's accordion body.</div>
                                         </div>
                                     </div>
-                 
+
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container pt-5">
+            <h2 class="text-center  fw-bold color-primary mb-5">Contact <span style="border-radius: 8px"
+                    class="bg-primary color-secondary px-2 py-1 ">Us</span></h2>
+
+            <div class="d-flex justify-content-between">
+                <div class="col-6  justify-content-start d-flex flex-wrap">
+                    <div class="col-6 pe-3">
+
+                        <div class="card shadow-sm border-0 borad-15">
+                            <div class="card-body d-flex justify-content-start">
+                                <div style="height: 50px;width: 50px;"
+                                    class="card bg-secondary d-flex justify-content-center align-items-center">
+                                    <i class="fa-brands fa-xl fa-instagram text-white"></i>
+                                </div>
+                                <div class="d-flex align-items-start flex-column">
+
+                                    <h5 class="fw-bold ms-2 mb-0">Instagram</h5>
+                                    <h6 class="ms-2 mb-0">@lorem</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-6 ps-3">
+                    <div class="card shadow-sm border-0 borad-15">
+                        <div class="card-body">
+                            <h4 class="text-center fw-bold my-3">Send a Message</h4>
+                            <div class="d-flex flex-column gap-3 px-3">
+                                <input type="text" class="form-control" placeholder="Name">
+                                <input type="email" class="form-control" placeholder="Email">
+                                <textarea placeholder="Message" class="form-control" name="" id="" cols="2" rows="2"></textarea>
+                            </div>
+                            <div class="d-flex justify-content-center">
+
+                                <button class="btn btn-secondary mt-3">
+                                    Submit
+                                </button>
                             </div>
                         </div>
                     </div>
