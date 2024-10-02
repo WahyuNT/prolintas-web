@@ -1,6 +1,6 @@
 <x-style />
 
-<body>
+<body style="background-color: #FBFBFB">
     <x-navbar />
     {{-- @yield('content') --}}
 
@@ -91,8 +91,185 @@
     </section>
 
     <section>
-        <h2 class="text-center mt-3 fw-bold color-primary mb-5">Our <span style="border-radius: 8px"
-                class="bg-primary color-secondary px-2 py-1 ">Services</span></h2>
+        <div class="container pt-3 pb-5">
+
+            <h2 class="text-center  fw-bold color-primary ">Our <span style="border-radius: 8px"
+                    class="bg-primary color-secondary px-2 py-1 ">Services</span></h2>
+
+            <div class="d-flex flex-wrap justify-content-center">
+                <div class="col-3 mb-4 px-3">
+                    <div class="card px-2 shadow-sm border-0" style="border-radius: 20px">
+                        <div class="card-body py-4">
+                            <div class="d-flex justify-content-center">
+
+                                <div class="card bg-secondary text-center " style="height: 50px;width: 50px;">
+
+                                </div>
+                            </div>
+                            <h5 class="card-title fw-bold color-primary text-center mt-3">Card title</h5>
+                            <p class="card-text text-center">Some quick example text to build on the card title and make
+                                up
+                                the bulk of
+                                the card's
+                                content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mb-4 px-3">
+                    <div class="card px-2 shadow-sm border-0" style="border-radius: 20px">
+                        <div class="card-body py-4">
+                            <div class="d-flex justify-content-center">
+
+                                <div class="card bg-secondary text-center " style="height: 50px;width: 50px;">
+
+                                </div>
+                            </div>
+                            <h5 class="card-title fw-bold color-primary text-center mt-3">Card title</h5>
+                            <p class="card-text text-center">Some quick example text to build on the card title and make
+                                up
+                                the bulk of
+                                the card's
+                                content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mb-4 px-3">
+                    <div class="card px-2 shadow-sm border-0" style="border-radius: 20px">
+                        <div class="card-body py-4">
+                            <div class="d-flex justify-content-center">
+
+                                <div class="card bg-secondary text-center " style="height: 50px;width: 50px;">
+
+                                </div>
+                            </div>
+                            <h5 class="card-title fw-bold color-primary text-center mt-3">Card title</h5>
+                            <p class="card-text text-center">Some quick example text to build on the card title and
+                                make
+                                up
+                                the bulk of
+                                the card's
+                                content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mb-4 px-3">
+                    <div class="card px-2 shadow-sm border-0" style="border-radius: 20px">
+                        <div class="card-body py-4">
+                            <div class="d-flex justify-content-center">
+
+                                <div class="card bg-secondary text-center " style="height: 50px;width: 50px;">
+
+                                </div>
+                            </div>
+                            <h5 class="card-title fw-bold color-primary text-center mt-3">Card title</h5>
+                            <p class="card-text text-center">Some quick example text to build on the card title and
+                                make
+                                up
+                                the bulk of
+                                the card's
+                                content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mb-4 px-3">
+                    <div class="card px-2 shadow-sm border-0" style="border-radius: 20px">
+                        <div class="card-body py-4">
+                            <div class="d-flex justify-content-center">
+
+                                <div class="card bg-secondary text-center " style="height: 50px;width: 50px;">
+
+                                </div>
+                            </div>
+                            <h5 class="card-title fw-bold color-primary text-center mt-3">Card title</h5>
+                            <p class="card-text text-center">Some quick example text to build on the card title and
+                                make
+                                up
+                                the bulk of
+                                the card's
+                                content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mb-4 px-3">
+                    <div class="card px-2 shadow-sm border-0" style="border-radius: 20px">
+                        <div class="card-body py-4">
+                            <div class="d-flex justify-content-center">
+
+                                <div class="card bg-secondary text-center " style="height: 50px;width: 50px;">
+
+                                </div>
+                            </div>
+                            <h5 class="card-title fw-bold color-primary text-center mt-3">Card title</h5>
+                            <p class="card-text text-center">Some quick example text to build on the card title and
+                                make
+                                up
+                                the bulk of
+                                the card's
+                                content.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <div class="card shadow-sm border-0" style="border-radius: 20px">
+                <div class="card-body">
+                    <h2 class="text-center mt-5 fw-bold color-primary mb-5"><span style="border-radius: 8px"
+                            class="bg-primary color-secondary px-2 py-1 ">Help</span> Centre</h2>
+
+                    <div class="d-flex justify-content-between flex-wrap align-items-start">
+                        <div class="col-5 text-center">
+                            <img class="img-fluid w-75" src="{{ asset('image/faq.png') }}" alt="">
+                        </div>
+                        <div class="col-7">
+                            <div class="card px-1  py-1"style="background-color: #F3F3F3;border-radius: 12px" >
+                                <div class="d-flex  flex-wrap align-items-center">
+
+                                    <div class=" text-start ps-2">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div class="col">
+                                        <input placeholder="Search for solution" type="text"
+                                            style="background-color: #F3F3F3" class="form-control border-0">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div mt-2">
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item border border-2" style="border-radius: 12px">
+                                        <h2 class="accordion-header">
+                                            <button style="border-radius: 12px" class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                aria-expanded="false" aria-controls="flush-collapseOne">
+                                                Accordion Item #1
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which
+                                                is intended to demonstrate the <code>.accordion-flush</code> class. This
+                                                is the first item's accordion body.</div>
+                                        </div>
+                                    </div>
+                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="mt-5 mb-5">
