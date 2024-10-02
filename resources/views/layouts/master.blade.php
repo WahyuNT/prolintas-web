@@ -3,9 +3,46 @@
 <body style="background-color: #FBFBFB">
     <x-navbar />
     {{-- @yield('content') --}}
+    <section class="bg-section " style="background-image: url('{{ asset('image/bg1.png') }}')">
+        <div class="container h-100">
+            <div class="d-flex align-items-center justify-content-between h-75">
+                <div class="col-6 d-flex  flex-column">
+                    <h1 class="text-white fw-bold">Revolutionize Your Logistics with Prolintas Transutama Logistik</h1>
+                    <p class="text-white">Your Trusted Partner in Global Freight and Supply Chain Solutions</p>
+                </div>
+                <div class="col-6 ">
+                    <div class="owl-carousel">
+                        <div class="d-flex justify-content-end">
+                            <div class="col-9">
+                                <div class="card borad-15 border-0" style="position: relative">
+                                    <img class="borad-15"
+                                        src="https://blueraycargo.id/wp-content/uploads/2022/06/Kapal-Kargo-HMM-Algeciras.jpg"
+                                        alt="">
+                                    <div class="card card-overlay-carousel ">
+                                        <div class="d-flex justify-content-between align-items-center">
+
+                                            <div class="col-10">
+                                                <h6 class=" px-3 fw-bold">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                    elit..</h6>
+                                            </div>
+                                            <div class="col-2">
+                                                <button class="btn btn-secondary">Detail</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div style="position: relative;">
-        <img style="padding-bottom: 1px" class="bg-section" src="{{ asset('image/bg1.png') }}" alt="">
+
 
         <svg style="position: absolute; bottom: 1%; left: 0; width: 100%; height: auto;z-index:1" width="1920"
             height="187" viewBox="0 0 1920 187" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,8 +79,8 @@
 
                             <div class=" d-flex justify-content-between flex-wrap">
                                 <div class="col-10 ps-1">
-                                    <input placeholder="Please enter your waybill number. Available up to 10 waybills."
-                                        type="text" class="form-control border-0 ">
+                                    <input placeholder="Please enter your waybill number." type="text"
+                                        class="form-control border-0 ">
                                 </div>
                                 <div class="col-2 text-end">
                                     <button class="btn"><i class="fa-solid fa-trash"></i></button>
@@ -107,7 +144,8 @@
                                 </div>
                             </div>
                             <h5 class="card-title fw-bold color-primary text-center mt-3">Card title</h5>
-                            <p class="card-text text-center">Some quick example text to build on the card title and make
+                            <p class="card-text text-center">Some quick example text to build on the card title and
+                                make
                                 up
                                 the bulk of
                                 the card's
@@ -126,7 +164,8 @@
                                 </div>
                             </div>
                             <h5 class="card-title fw-bold color-primary text-center mt-3">Card title</h5>
-                            <p class="card-text text-center">Some quick example text to build on the card title and make
+                            <p class="card-text text-center">Some quick example text to build on the card title and
+                                make
                                 up
                                 the bulk of
                                 the card's
@@ -317,7 +356,10 @@
                 </div>
             </div>
             <div class="maps mt-5">
-                <iframe class="borad-15" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15812.257968526736!2d110.36639850462139!3d-7.782987181025065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a591a4d553bd5%3A0xc0f964003add568b!2sTugu%20Jogja!5e0!3m2!1sid!2sid!4v1727861716901!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="borad-15"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15812.257968526736!2d110.36639850462139!3d-7.782987181025065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a591a4d553bd5%3A0xc0f964003add568b!2sTugu%20Jogja!5e0!3m2!1sid!2sid!4v1727861716901!5m2!1sid!2sid"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -325,8 +367,8 @@
     <footer class="bg-primary">
         <div class="d-flex justify-content-between container pt-5">
             <div class="col-4 d-flex flex-column">
-                <img src="{{ asset('image/logo prolintas.png') }}" class="img-fluid" style="height: 81px"
-                    width="316px" alt="">
+                <img src="{{ asset('image/logo prolintas.png') }}" class="img-fluid"
+                    style="height: 81px ;width: 316px;" alt="">
                 <p class="text-white">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum sapiente modi, earum quod totam
                     officia sunt iusto ipsum necessitatibus fugiat odit ipsam odio optio omnis, dolore vitae nam quia.
@@ -361,6 +403,14 @@
         </div>
     </footer>
     <x-script />
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            items: 1
+        });
+    </script>
 </body>
 
 </html>
