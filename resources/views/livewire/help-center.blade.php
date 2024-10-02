@@ -9,10 +9,14 @@
                         {{ $item->title }}
                     </button>
                 </h2>
-                <div id="flush-{{ $item->id }}" class="accordion-collapse collapse" data-bs-parent="#accordion{{ $item->id }}">
+                <div id="flush-{{ $item->id }}" class="accordion-collapse collapse"
+                    data-bs-parent="#accordion{{ $item->id }}">
                     <div class="accordion-body"> {{ $item->desc }}</div>
                 </div>
             </div>
         </div>
     @endforeach
+    <div class="d-flex justify-content-center">
+        {{ $faq->links() }}
+    </div>
 </div>

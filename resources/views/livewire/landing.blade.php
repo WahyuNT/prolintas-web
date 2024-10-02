@@ -116,6 +116,7 @@
         <div class="mt-5 pt-3" style="position: relative;">
 
             <div style="position: absolute; bottom: 0; left: 0;" class="wave wave-1"></div>
+            <div style="position: absolute; bottom: 0; left: 0;" class="ship ship-1"></div>
             <div style="position: absolute; bottom: 0; left: 0;" class="wave wave-2"></div>
             <div style="position: absolute; bottom: 0; left: 0;" class="wave wave-3"></div>
         </div>
