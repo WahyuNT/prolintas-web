@@ -127,8 +127,8 @@
             <h2 class="text-center  fw-bold color-primary mb-5">Our <span style="border-radius: 8px"
                     class="bg-primary color-secondary px-2 py-1 ">Services</span></h2>
 
-                    @livewire('our-services')
-             
+            @livewire('our-services')
+
         </div>
     </section>
 
@@ -157,25 +157,7 @@
                                 </div>
                             </div>
                             <div class="div mt-2">
-                                <div class="accordion accordion-flush" id="accordionFlushExample">
-                                    <div class="accordion-item border border-2" style="border-radius: 12px">
-                                        <h2 class="accordion-header">
-                                            <button style="border-radius: 12px" class="accordion-button collapsed"
-                                                type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                                aria-controls="flush-collapseOne">
-                                                Accordion Item #1
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">Placeholder content for this accordion, which
-                                                is intended to demonstrate the <code>.accordion-flush</code> class. This
-                                                is the first item's accordion body.</div>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                @livewire('help-center')
                             </div>
                         </div>
                     </div>
@@ -190,27 +172,11 @@
                     class="bg-primary color-secondary px-2 py-1 ">Us</span></h2>
 
             <div class="d-flex justify-content-between">
-                <div class="col-6  justify-content-start d-flex flex-wrap">
-                    <div class="col-6 pe-3">
-
-                        <div class="card shadow-sm border-0 borad-15">
-                            <div class="card-body d-flex justify-content-start">
-                                <div style="height: 50px;width: 50px;"
-                                    class="card bg-secondary d-flex justify-content-center align-items-center">
-                                    <i class="fa-brands fa-xl fa-instagram text-white"></i>
-                                </div>
-                                <div class="d-flex align-items-start flex-column">
-
-                                    <h5 class="fw-bold ms-2 mb-0">Instagram</h5>
-                                    <h6 class="ms-2 mb-0">@lorem</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="col-6 justify-content-start ">
+                    @livewire('contact-us')
                 </div>
                 <div class="col-6 ps-3">
-                    <div class="card shadow-sm border-0 borad-15">
+                    <div class="card h-100 shadow-sm border-0 borad-15">
                         <div class="card-body">
                             <h4 class="text-center fw-bold my-3">Send a Message</h4>
                             <div class="d-flex flex-column gap-3 px-3">
@@ -229,9 +195,8 @@
                 </div>
             </div>
             <div class="maps mt-5">
-                <iframe class="borad-15"
-                    src="{{ $maps->maps_link }}"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                <iframe class="borad-15" src="{{ $maps->maps_link }}" width="100%" height="450"
+                    style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
