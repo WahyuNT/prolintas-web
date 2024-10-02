@@ -273,7 +273,7 @@
     </section>
 
     <section>
-        <div class="container pt-5">
+        <div class="container pt-5 mb-5">
             <h2 class="text-center  fw-bold color-primary mb-5">Contact <span style="border-radius: 8px"
                     class="bg-primary color-secondary px-2 py-1 ">Us</span></h2>
 
@@ -317,14 +317,49 @@
                 </div>
             </div>
             <div class="maps mt-5">
-                <iframe class="borad-15" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21041.83286957594!2d110.36639850462139!3d-7.782987181025065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a591a4d553bd5%3A0xc0f964003add568b!2sTugu%20Jogja!5e1!3m2!1sid!2sid!4v1727860992036!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="borad-15" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15812.257968526736!2d110.36639850462139!3d-7.782987181025065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a591a4d553bd5%3A0xc0f964003add568b!2sTugu%20Jogja!5e0!3m2!1sid!2sid!4v1727861716901!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
-    <div class="mt-5 mb-5">
-        <br class="mb-5">
-    </div>
+    <footer class="bg-primary">
+        <div class="d-flex justify-content-between container pt-5">
+            <div class="col-4 d-flex flex-column">
+                <img src="{{ asset('image/logo prolintas.png') }}" class="img-fluid" style="height: 81px"
+                    width="316px" alt="">
+                <p class="text-white">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum sapiente modi, earum quod totam
+                    officia sunt iusto ipsum necessitatibus fugiat odit ipsam odio optio omnis, dolore vitae nam quia.
+                    Veritatis.
+                </p>
+            </div>
+            <div class="col-4 ps-5">
+                <div class="d-flex flex-column gap-1">
+                    <h5 class="fw-bold color-secondary">Our Services</h5>
+                    <h6 class="text-white">FCL & LCL Services</h6>
+                    <h6 class="text-white">Container Depot</h6>
+                    <h6 class="text-white">Logistics</h6>
+                    <h6 class="text-white">Air Cargo</h6>
+                    <h6 class="text-white">Warehouse</h6>
+                    <h6 class="text-white">Door-to-Door Service Delivery</h6>
+                    <h6 class="text-white">Customs Clearance</h6>
+                    <h6 class="text-white">Customs Broker</h6>
+                </div>
+            </div>
+            <div class="col-4 ps-5">
+                <div class="d-flex flex-column gap-1">
+                    <h5 class="fw-bold color-secondary">Contact Us</h5>
+                    <h6 class="text-white">Facebook</h6>
+                    <h6 class="text-white">Twitter</h6>
+                    <h6 class="text-white">Instagram</h6>
+                    <h6 class="text-white">YouTube</h6>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 d-flex justify-content-center text-white py-3 mt-3" style="background-color: #161977">
+            © Copyright 2024
+        </div>
+    </footer>
     <x-script />
 </body>
 
