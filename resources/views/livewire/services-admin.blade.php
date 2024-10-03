@@ -153,6 +153,9 @@
                             <label for="title" class="form-label">Title</label>
                             <input required type="text" class="form-control" wire:model.defer="title" id="title"
                                 aria-describedby="titlesection">
+                            @error('title')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-12">
@@ -160,13 +163,18 @@
                             <label for="desc" class="form-label">Description</label>
                             <input required type="text" class="form-control" wire:model.defer="desc"
                                 id="desc" aria-describedby="titlesection">
+                            @error('desc')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-12 mb-3">
                         <label for="Gambar" class="form-label text-muted">Icon <small>(Max
                                 4MB)</small> </label>
                         <input required wire:model="nama_gambar" type="file" class="form-control">
-
+                        @error('nama_gambar')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                     </div>
                     <div class="d-flex justify-content-center">
 

@@ -65,6 +65,8 @@ class ServicesAdmin extends Component
 
         $this->validate([
             'nama_gambar' => 'mimes:png,jpg,pdf|max:4096', // 4MB Max
+            'title' => 'required',
+            'desc' => 'required',
         ]);
 
         $currentTimestamp = time();
@@ -78,11 +80,7 @@ class ServicesAdmin extends Component
             $this->alert('success', 'Data Berhasil Ditambahkan', [
                 'position' => 'center'
             ]);
-            $this->title = null;
-            $this->desc = null;
-            $this->add = null;
-
-            $this->nama_gambar = null;
+            $this->back();
         } else {
             $this->alert('error', 'Data Gagal Ditambahkan', [
                 'position' => 'center'
@@ -103,17 +101,20 @@ class ServicesAdmin extends Component
 
     public function back()
     {
-        $this->edit = '';
         $this->title = '';
         $this->desc = '';
+        $this->icon = '';
+        $this->edit = '';
         $this->add = '';
+        $this->nama_gambar = '';
+        $this->icon_baru = '';
+
     }
     public function simpan()
     {
         $this->validate([
             'title' => 'required',
             'desc' => 'required',
-
         ]);
 
         $data = Services::where('id', $this->edit)->first();
@@ -152,9 +153,10 @@ class ServicesAdmin extends Component
         if ($data->icon && Storage::disk('real_public')->exists('image/services/' . $data->icon)) {
             Storage::disk('real_public')->delete('image/services/' . $data->icon);
         }
-        
+
         if ($data->delete()) {
             $this->alert('success', 'Data berhasil dihapus');
+            $this->back();
         } else {
             $this->alert('error', 'Data gagal dihapus');
         }
@@ -165,6 +167,7 @@ class ServicesAdmin extends Component
         $data->is_active = 1;
         if ($data->save()) {
             $this->alert('success', 'Data berhasil diaktifkan');
+            $this->back();
         } else {
             $this->alert('error', 'Data gagal diaktifkan');
         }
@@ -178,6 +181,7 @@ class ServicesAdmin extends Component
 
         if ($data->save()) {
             $this->alert('success', 'Data berhasil dinonaktifkan');
+            $this->back();
         } else {
             $this->alert('error', 'Data gagal dinonaktifkan');
         }
