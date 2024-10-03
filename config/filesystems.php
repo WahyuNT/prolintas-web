@@ -38,7 +38,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
@@ -52,6 +52,20 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
+        'real_public' => [
+            'driver' => 'local',
+            'root' => public_path(),
+            'url' => env('APP_URL'),
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+        // 'real_public' => [
+        //     'driver' => 'local',
+        //     'root' => '/home/sipy6876/public_html',
+        //     'url' => env('APP_URL') . '/public_html',
+        //     'visibility' => 'public',
+        //     'throw' => false,
+        // ],
 
     ],
 
