@@ -41,11 +41,11 @@ class TitleAdmin extends Component
         $title = Landing::where('type', 'home')->first();
         $title->title = $this->title;
         $title->subtitle = $this->subtitle;
-      
+
         if ($title->save()) {
-            $this->alert('success', 'Data berhasil dihapus');
+            $this->alert('success', 'Data berhasil diperbarui');
         } else {
-            $this->alert('error', 'Data gagal dihapus');
+            $this->alert('error', 'Data gagal diperbarui');
         }
     }
 }

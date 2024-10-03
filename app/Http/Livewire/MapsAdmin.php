@@ -39,26 +39,26 @@ class MapsAdmin extends Component
     {
         $this->edit = 'disabled';
         $data = Landing::where('type', 'maps')->first();
-     
+
 
         $iframeTag = $this->maps;
 
-      
+
         preg_match('/https[^"]*/', $iframeTag, $matches);
 
         // Cek apakah match ditemukan
         if (isset($matches[0])) {
-            $data->maps_link = $matches[0]; 
+            $data->maps_link = $matches[0];
         } else {
             $data->maps_link = null;
         }
 
-     
+
 
         if ($data->save()) {
-            $this->alert('success', 'Data berhasil dihapus');
+            $this->alert('success', 'Data berhasil diperbarui');
         } else {
-            $this->alert('error', 'Data gagal dihapus');
+            $this->alert('error', 'Data gagal diperbarui');
         }
     }
 }
