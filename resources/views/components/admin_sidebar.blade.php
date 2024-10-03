@@ -19,7 +19,7 @@
          <nav class="sidebar-nav scroll-sidebar " data-simplebar="">
              <ul id="sidebarnav " class="ps-0 pt-3">
 
-                 <li class="sidebar-item ">
+                 <li class="sidebar-item mb-2">
                      <a class="sidebar-link active" href="#" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>
@@ -27,6 +27,39 @@
                          <span class="hide-menu">Home</span>
                      </a>
                  </li>
+                 <li class="sidebar-item mb-2">
+                     <a class="sidebar-link " href="#" aria-expanded="false">
+                         <span>
+                             <i class="ti ti-mountain"></i>
+                         </span>
+                         <span class="hide-menu">Our Services</span>
+                     </a>
+                 </li>
+                 <li class="sidebar-item mb-2">
+                    <a class="sidebar-link " href="#" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-mountain"></i>
+                        </span>
+                        <span class="hide-menu">NEWS</span>
+                    </a>
+                </li>
+                 <li class="sidebar-item mb-2">
+                     <a class="sidebar-link " href="#" aria-expanded="false">
+                         <span>
+                             <i class="ti ti-mountain"></i>
+                         </span>
+                         <span class="hide-menu">FAQ</span>
+                     </a>
+                 </li>
+                 <li class="sidebar-item mb-2">
+                     <a class="sidebar-link " href="#" aria-expanded="false">
+                         <span>
+                             <i class="ti ti-mountain"></i>
+                         </span>
+                         <span class="hide-menu">Account</span>
+                     </a>
+                 </li>
+        
 
 
              </ul>

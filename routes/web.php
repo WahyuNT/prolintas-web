@@ -23,6 +23,10 @@ Route::get('/', function () {
 Route::get('login', [LoginController::class, 'login'])->name('login');
 
 Route::prefix('admin')->group(function () {
-    Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
+    Route::get('/', fn() => view('pages.admin.index'))->name('admin.dashboard');
+    Route::get('/services', fn() => view('pages.admin.services'))->name('admin.services');
+    Route::get('/news', fn() => view('pages.admin.news'))->name('admin.news');
+    Route::get('/faq', fn() => view('pages.admin.faq'))->name('admin.faq');
+    Route::get('/account', fn() => view('pages.admin.account'))->name('admin.account');
 });
