@@ -20,7 +20,8 @@
              <ul id="sidebarnav " class="ps-0 pt-3">
 
                  <li class="sidebar-item mb-2">
-                     <a class="sidebar-link active" href="#" aria-expanded="false">
+                     <a class="sidebar-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"
+                         href="{{ route('admin.dashboard') }}" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>
                          </span>
@@ -28,7 +29,8 @@
                      </a>
                  </li>
                  <li class="sidebar-item mb-2">
-                     <a class="sidebar-link " href="#" aria-expanded="false">
+                     <a class="sidebar-link {{ request()->routeIs('admin.services') ? 'active' : '' }}"
+                         href="{{ route('admin.services') }}" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>
                          </span>
@@ -36,15 +38,17 @@
                      </a>
                  </li>
                  <li class="sidebar-item mb-2">
-                    <a class="sidebar-link " href="#" aria-expanded="false">
-                        <span>
-                            <i class="ti ti-mountain"></i>
-                        </span>
-                        <span class="hide-menu">NEWS</span>
-                    </a>
-                </li>
+                     <a class="sidebar-link {{ request()->routeIs('admin.news') ? 'active' : '' }}"
+                         href="{{ route('admin.news') }}" aria-expanded="false">
+                         <span>
+                             <i class="ti ti-mountain"></i>
+                         </span>
+                         <span class="hide-menu">NEWS</span>
+                     </a>
+                 </li>
                  <li class="sidebar-item mb-2">
-                     <a class="sidebar-link " href="#" aria-expanded="false">
+                     <a class="sidebar-link {{ request()->routeIs('admin.faq') ? 'active' : '' }}"
+                         href="{{ route('admin.faq') }}" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>
                          </span>
@@ -52,14 +56,15 @@
                      </a>
                  </li>
                  <li class="sidebar-item mb-2">
-                     <a class="sidebar-link " href="#" aria-expanded="false">
+                     <a class="sidebar-link {{ request()->routeIs('admin.account') ? 'active' : '' }}"
+                         href="{{ route('admin.account') }}" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>
                          </span>
                          <span class="hide-menu">Account</span>
                      </a>
                  </li>
-        
+
 
 
              </ul>

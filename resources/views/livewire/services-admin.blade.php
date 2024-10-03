@@ -21,8 +21,8 @@
                                 <th scope="col">No</th>
                                 <th scope="col">Icon</th>
                                 <th scope="col">Title</th>
-                                <th scope="col">desc</th>
-                                <th scope="col">Active</th>
+                                <th scope="col">Desc</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Set</th>
                                 <th scope="col">Action</th>
                             </tr>
