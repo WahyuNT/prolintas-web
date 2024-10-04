@@ -42,10 +42,23 @@
 
 
                 </ul>
-                <button class="btn">
 
-                    <img style="height: 30px" class="img-fluid " src="{{ asset('image/uk flag.png') }}" alt="">
-                </button>
+                @if (session('lang') == 'en')
+                    <button class="btn">
+                        <img wire:click="toId" style="height: 30px" class="img-fluid " src="{{ asset('image/uk flag.png') }}"
+                            alt="">
+                    </button>
+                @elseif (session('lang') == 'id')
+                    <button class="btn">
+                        <img wire:click="toEn" style="height: 30px" class="img-fluid " src="{{ asset('image/indo flag.png') }}"
+                            alt="">
+                    </button>
+                @endif
+
+
+
+
+
                 @if (isset($_COOKIE['token']) && !empty($_COOKIE['token']))
                     <a href="{{ route('admin.dashboard') }}">
                         <button class="btn btn-secondary" type="button">Dashboard</button>

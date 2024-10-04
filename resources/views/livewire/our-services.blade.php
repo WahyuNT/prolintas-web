@@ -10,8 +10,23 @@
                                 <img class="img-fluid" src="{{ asset('image/services/' . $item->icon) }}" alt="">
                             </div>
                         </div>
-                        <h5 class="card-title fw-bold color-primary text-center mt-3">{{ $item->title }}</h5>
-                        <p class="card-text text-center">{{ $item->desc }}</p>
+                        @if (session('lang') == 'en')
+                            <h5 class="card-title fw-bold color-primary text-center mt-3">{{ $item->title }}</h5>
+                            <p class="card-text text-center">{{ $item->desc }}</p>
+                        @elseif (session('lang') == 'id')
+                            @if ($item->judul != null)
+                                <h5 class="card-title fw-bold color-primary text-center mt-3">{{ $item->judul }}</h5>
+                            @else
+                                <h5 class="card-title fw-bold color-primary text-center mt-3">{{ $item->title }}</h5>
+                            @endif
+
+                            @if ($item->deskripsi != null)
+                                <p class="card-text text-center">{{ $item->deskripsi }}</p>
+                            @else
+                                <p class="card-text text-center">{{ $item->desc }}</p>
+                            @endif
+                        @endif
+
 
                     </div>
                 </div>

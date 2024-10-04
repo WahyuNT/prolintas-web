@@ -3,8 +3,26 @@
         <div class="container h-100 ">
             <div class="d-flex align-items-center justify-content-between h-75">
                 <div class="col-6 d-flex  flex-column">
-                    <h1 class="text-white fw-bold">{{ $home->title }}</h1>
-                    <p class="text-white">{{ $home->subtitle }}</p>
+
+                    @if (session('lang') == 'en')
+                        <h1 class="text-white fw-bold">{{ $home->title }}</h1>
+                    @elseif (session('lang') == 'id')
+                        @if ($home->judul != null)
+                            <h1 class="text-white fw-bold">{{ $home->judul }}</h1>
+                        @else
+                            <h1 class="text-white fw-bold">{{ $home->title }}</h1>
+                        @endif
+                    @endif
+                    @if (session('lang') == 'en')
+                        <p class="text-white">{{ $home->subtitle }}</p>
+                    @elseif (session('lang') == 'id')
+                        @if ($home->subjudul != null)
+                            <p class="text-white">{{ $home->subjudul }}</p>
+                        @else
+                            <p class="text-white">{{ $home->subtitle }}</p>
+                        @endif
+
+                    @endif
                 </div>
                 <div class="col-4 ">
                     <div class="div">
@@ -18,6 +36,7 @@
                                             <div class="d-flex justify-content-between align-items-center">
 
                                                 <div class="col-10">
+
                                                     <h6 class=" px-3 fw-bold">{{ $item->title }}</h6>
                                                 </div>
                                                 <div class="col-2">
@@ -100,14 +119,32 @@
 
         <div class="d-flex flex-wrap justify-content-between align-items-start pt-3">
             <div class="col-4 text-center">
-                <img class="img-fluid" style="height: 300px" src="{{ asset('image/' . $about->image) }}" alt="">
+                <img class="img-fluid" style="height: 300px" src="{{ asset('image/' . $about->image) }}"
+                    alt="">
             </div>
             <div class="col-7">
                 <h2 class="fw-bold">
-                    {{ $about->title }}
+                    @if (session('lang') == 'en')
+                        {{ $about->title }}
+                    @elseif (session('lang') == 'id')
+                        @if ($about->judul != null)
+                            {{ $about->judul }}
+                        @else
+                            {{ $about->title }}
+                        @endif
+
+                    @endif
                 </h2>
                 <h5>
-                    {{ $about->subtitle }}
+                    @if (session('lang') == 'en')
+                        {{ $about->subtitle }}
+                    @elseif (session('lang') == 'id')
+                        @if ($about->subjudul != null)
+                            {{ $about->subjudul }}
+                        @else
+                            {{ $about->subtitle }}
+                        @endif
+                    @endif
                 </h5>
             </div>
         </div>
@@ -194,5 +231,5 @@
 
     @livewire('footer')
 
- 
+
 </div>
