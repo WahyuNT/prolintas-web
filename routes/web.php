@@ -15,14 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+
+Route::get('/', fn() => view('pages.index'))->name('index');
 
 
-Route::get('login', [LoginController::class, 'login'])->name('login');
+Route::get('login', [LoginController::class, 'loginPage'])->name('login');
+Route::get('register', [LoginController::class, 'registerPage'])->name('register');
+Route::post('/registerProses', [LoginController::class, 'registerProses'])->name('register.proses');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/loginStore', [LoginController::class, 'loginStore'])->name('login.proses');
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware(['auth'])->group(function () {
 
     Route::get('/', fn() => view('pages.admin.index'))->name('admin.dashboard');
     Route::get('/services', fn() => view('pages.admin.services'))->name('admin.services');

@@ -10,11 +10,11 @@
 
         </ul>
 
-        <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+        <div class="navbar-collapse justify-content-end px-0 container" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                <form action="#" method="post">
+                <form action="{{route('logout')}}" method="post">
                     @csrf
-                    <button type="submit" class="btn btn-danger">Logout</button>
+                    <button type="submit" class="btn btn-danger">Log out</button>
                 </form>
 
             </ul>

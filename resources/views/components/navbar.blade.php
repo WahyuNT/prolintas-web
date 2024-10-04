@@ -35,9 +35,16 @@
                 </li> --}}
 
             </ul>
-            <form class="d-flex" role="search">
-                <button class="btn btn-secondary" type="submit">Login</button>
-            </form>
+            @if (isset($_COOKIE['token']) && !empty($_COOKIE['token']))
+                <a href="{{ route('admin.dashboard') }}">
+                    <button class="btn btn-secondary" type="button">Dashboard</button>
+                </a>
+            @else
+                <a href="{{ route('login') }}">
+
+                    <button class="btn btn-secondary" type="button">Login</button>
+                </a>
+            @endif
         </div>
     </div>
 </nav>

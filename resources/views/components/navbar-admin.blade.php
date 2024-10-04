@@ -35,9 +35,10 @@
                 </li> --}}
 
             </ul>
-            <form class="d-flex" role="search">
-                <button class="btn btn-secondary" type="submit">Login</button>
-            </form>
+            <a href="{{ 'login' }}">
+
+                <button class="btn btn-secondary" type="button">Login</button>
+            </a>
         </div>
     </div>
 </nav>

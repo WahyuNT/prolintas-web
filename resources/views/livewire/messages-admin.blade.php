@@ -10,7 +10,7 @@
     </div>
     <div class=" border-0 mt-2 borad-15">
         <div class="card-body">
-            <table class="table table-bordered">
+            <table class="table table-bor   dered">
                 <thead>
                     <tr>
                         <th scope="col">No</th>
@@ -47,7 +47,7 @@
                                 @endif
                             </td>
                         </tr>
-                        @empty
+                    @empty
                         <tr>
                             <td colspan="5" class="text-center">No Message</td>
                         </tr>
