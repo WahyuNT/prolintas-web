@@ -1,7 +1,7 @@
 <div>
     <div class="card border-0 shadow-sm borad-15">
         <div class="card-body">
-            <h5 class="fw-bold text-center">Footer</h5>
+            <h5 class="fw-bold text-center">Header</h5>
             <div class="d-flex justify-content-between flex-wrap">
                 <div class="col-12 mb-3 d-flex justify-content-start align-items-center">
                     <div class="div">
@@ -28,13 +28,7 @@
                         </div>
                     @endif
                 </div>
-                <div class="col-12">
-                    <div class="mb-3">
-                        <label for="subtitle" class="form-label">Sub Title</label>
-                        <input {{ $edit }} type="text" class="form-control" wire:model.defer="subtitle"
-                            id="subtitle" aria-describedby="titlesection">
-                    </div>
-                </div>
+                
             </div>
             <div class="d-flex justify-content-center">
                 @if ($edit == 'disabled')

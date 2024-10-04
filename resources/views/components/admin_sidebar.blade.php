@@ -4,9 +4,12 @@
      <div>
          <div class="brand-logo d-flex align-items-center d-flex justify-content-center">
              <div class="d-flex justify-content-center">
-
+                 @php
+                 use App\Models\Landing;
+                     $data = Landing::where('type', 'header')->first();
+                 @endphp
                  <a href="/" class="">
-                     <img class="img-fluid" src="{{ asset('image/logo prolintas.png') }}" alt="">
+                     <img class="img-fluid" src="{{ asset('image/'.$data->image) }}" alt="">
                  </a>
              </div>
              <div data-bs-toggle="modal" data-bs-target="#exampleModal"

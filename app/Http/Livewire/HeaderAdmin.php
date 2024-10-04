@@ -8,7 +8,7 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class FooterAdmin extends Component
+class HeaderAdmin extends Component
 {
     use WithFileUploads;
     use LivewireAlert;
@@ -17,16 +17,17 @@ class FooterAdmin extends Component
     public $disabled = 'disabled';
     public $image_baru;
 
-
     public function render()
     {
-        $data = Landing::where('type', 'footer')->first();
+
+        $data = Landing::where('type', 'header')->first();
         $this->subtitle = $data->subtitle;
         $image = $data->image;
         $edit =  $this->edit;
 
 
-        return view('livewire.footer-admin', compact('data', 'image', 'edit'));
+
+        return view('livewire.header-admin', compact('data', 'image', 'edit'));
     }
 
     public function edit()
@@ -40,7 +41,7 @@ class FooterAdmin extends Component
     }
     public function simpan()
     {
-        $data = Landing::where('type', 'footer')->first();
+        $data = Landing::where('type', 'header')->first();
         $data->subtitle = $this->subtitle;
 
         $currentTimestamp = time();
