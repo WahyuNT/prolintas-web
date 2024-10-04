@@ -15,10 +15,12 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 288);
-            $table->string('icon', 288);
-            $table->string('desc', 288);
-            $table->boolean('is_active');
+            $table->string('title', 288)->nullable();
+            $table->string('icon', 288)->nullable();
+            $table->string('desc', 288)->nullable();
+            $table->boolean('is_active')->default(1);
+            $table->string('judul', 288)->nullable();
+            $table->string('deskripsi', 288)->nullable();
             $table->timestamps();
         });
     }

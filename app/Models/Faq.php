@@ -9,5 +9,5 @@ class Faq extends Model
 {
     use HasFactory;
     protected $table = 'faq';
-    protected $fillable = ['title', 'image', 'desc', 'is_active'];
+    protected $fillable = ['title', 'image', 'desc', 'is_active', 'judul', 'deskripsi'];
 }

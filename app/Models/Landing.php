@@ -9,5 +9,5 @@ class Landing extends Model
 {
     use HasFactory;
     protected $table = 'landing';
-    protected $fillable = ['title', 'subtitle', 'description', 'image', 'icon', 'is_active', 'maps_link', 'type'];
+    protected $fillable = ['title', 'subtitle', 'description', 'image', 'icon', 'is_active', 'maps_link', 'type', 'judul', 'subjudul'];
 }

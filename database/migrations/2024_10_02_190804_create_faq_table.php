@@ -15,10 +15,12 @@ return new class extends Migration
     {
         Schema::create('faq', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 288);
-            $table->string('image', 288);
-            $table->text('desc');
-            $table->boolean('is_active');
+            $table->string('title', 288)->nullable();
+            $table->string('image', 288)->nullable();
+            $table->text('desc')->nullable();
+            $table->boolean('is_active')->default(1);
+            $table->string('judul', 288)->nullable();
+            $table->string('deskripsi', 288)->nullable();
             $table->timestamps();
         });
     }
