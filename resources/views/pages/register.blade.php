@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
     <div class="d-flex justify-content-center  align-items-center ">
-        <div class="col-3  mt-5 pt-5">
+        <div class="col-lg-3 col-10  mt-5 pt-5">
             <div class="card borad-20 border-0 px-3 shadow-sm">
                 <div class="card-body">
                     <form action="{{ route('register.proses') }}" method="POST">
