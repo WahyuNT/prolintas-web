@@ -14,6 +14,8 @@ class TitleAdmin extends Component
     use LivewireAlert;
     public $title;
     public $subtitle;
+    public $judul;
+    public $subjudul;
     public $edit = 'disabled';
     public $disabled = 'disabled';
     public $image_baru;
@@ -23,6 +25,8 @@ class TitleAdmin extends Component
         $title = Landing::where('type', 'home')->first();
         $this->title = $title->title;
         $this->subtitle = $title->subtitle;
+        $this->judul = $title->judul;
+        $this->subjudul = $title->subjudul;
         $image = $title->image;
         $edit =  $this->edit;
 
@@ -42,9 +46,16 @@ class TitleAdmin extends Component
     public function simpan()
     {
 
+        $this->validate([
+            'title' => 'required',
+            'subtitle' => 'required',
+       
+        ]);
         $data = Landing::where('type', 'home')->first();
         $data->title = $this->title;
         $data->subtitle = $this->subtitle;
+        $data->judul = $this->judul;
+        $data->subjudul = $this->subjudul;
 
         $currentTimestamp = time();
         if ($this->image_baru != null) {

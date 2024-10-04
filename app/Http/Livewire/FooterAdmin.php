@@ -16,6 +16,7 @@ class FooterAdmin extends Component
     public $edit = 'disabled';
     public $disabled = 'disabled';
     public $image_baru;
+    public $subjudul;
 
 
     public function render()
@@ -24,6 +25,7 @@ class FooterAdmin extends Component
         $this->subtitle = $data->subtitle;
         $image = $data->image;
         $edit =  $this->edit;
+        $this->subjudul = $data->subjudul;
 
 
         return view('livewire.footer-admin', compact('data', 'image', 'edit'));
@@ -42,7 +44,9 @@ class FooterAdmin extends Component
     {
         $data = Landing::where('type', 'footer')->first();
         $data->subtitle = $this->subtitle;
+        $data->subjudul = $this->subjudul;
 
+        
         $currentTimestamp = time();
         if ($this->image_baru != null) {
             $this->validate([

@@ -17,6 +17,8 @@ class AboutAdmin extends Component
     public $edit = 'disabled';
     public $disabled = 'disabled';
     public $image_baru;
+    public $judul;
+    public $subjudul;
 
     public function render()
     {
@@ -25,6 +27,8 @@ class AboutAdmin extends Component
         $this->subtitle = $title->subtitle;
         $image = $title->image;
         $edit =  $this->edit;
+        $this->judul = $title->judul;
+        $this->subjudul = $title->subjudul;
 
 
         return view('livewire.about-admin', compact('title', 'image', 'edit'));
@@ -45,6 +49,8 @@ class AboutAdmin extends Component
         $data = Landing::where('type', 'about')->first();
         $data->title = $this->title;
         $data->subtitle = $this->subtitle;
+        $data->judul = $this->judul;
+        $data->subjudul = $this->subjudul;
 
 
         $currentTimestamp = time();

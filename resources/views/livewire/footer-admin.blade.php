@@ -35,6 +35,17 @@
                             id="subtitle" aria-describedby="titlesection">
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="subjudul" class="form-label">Sub Judul<small class="text-muted">
+                                (Indonesia)</small></label>
+                        <input {{ $edit }} type="text" class="form-control" wire:model.defer="subjudul"
+                            id="subjudul" aria-describedby="titlesection">
+                    </div>
+                </div>
+                <small class=" text-danger text-center mb-2">Jika kolom indonesia kosong, akan otomatis diisi
+                    menggunakan bahasa
+                    Inggris.</small>
             </div>
             <div class="d-flex justify-content-center">
                 @if ($edit == 'disabled')
