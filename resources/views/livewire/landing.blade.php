@@ -1,8 +1,8 @@
 <div>
     <section id="home" class="bg-section pt-5 " style="background-image: url('{{ asset('image/' . $home->image) }}')">
         <div class="container h-100 ">
-            <div class="d-flex align-items-center justify-content-between h-75">
-                <div class="col-6 d-flex  flex-column">
+            <div class="d-flex align-items-center justify-content-between h-75 flex-wrap">
+                <div class="col-lg-6 col-12 d-flex mt-5 mt-lg-0 flex-column text-center text-lg-start">
 
                     @if (session('lang') == 'en')
                         <h1 class="text-white fw-bold">{{ $home->title }}</h1>
@@ -24,13 +24,13 @@
 
                     @endif
                 </div>
-                <div class="col-4 ">
+                <div class="col-lg-4 col-12 ">
                     <div class="div">
                         <div class="d-flex justify-content-between ">
                             <div class="owl-carousel ">
                                 @forelse ($news as $item)
                                     <div class="card borad-15 border-0" style="position: relative">
-                                        <img class="borad-15" style="height: 250px; object-fit: cover;"
+                                        <img class="borad-15 " style="height: 250px; object-fit: cover;"
                                             src="{{ asset('image/news/' . $item->image) }}" alt="">
                                         <div class="card card-overlay-carousel ">
                                             <div class="d-flex justify-content-between align-items-center">
@@ -87,25 +87,25 @@
     </div>
 
     <section class="py-5" style="background: linear-gradient(360deg, #FCFCFC 0%, #F8F8F8 100%)">
-        <div class="d-flex justify-content-center py-5">
-            <div class="col-6 py-5">
+        <div class="d-flex justify-content-center py-5 container">
+            <div class="col-lg-6 col-12 py-5">
                 <div class="card shadow-sm pt-4 pb-3 px-4 border-0" style="border-radius: 15px">
 
-                    <h2 class="text-primary fw-bold">Cek Resi</h2>
+                    <h2 class="text-primary fw-bold text-lg-start text-center">Cek Resi</h2>
                     <div class="card-body px-0 d-flex justify-content-between flex-wrap">
-                        <div class="col-10 border border-1" style="border-radius: 10px">
+                        <div class="col-lg-10 col-12 border border-1" style="border-radius: 10px">
 
                             <div class=" d-flex justify-content-between flex-wrap">
-                                <div class="col-10 ps-1">
+                                <div class="col-10  ps-1">
                                     <input placeholder="Please enter your waybill number." type="text"
                                         class="form-control border-0 ">
                                 </div>
-                                <div class="col-2 text-end">
+                                <div class="col-2 text-lg-end text-center">
                                     <button class="btn"><i class="fa-solid fa-trash"></i></button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col text-end ps-3">
+                        <div class="col text-end ps-lg-3 mt-3 mt-lg-0">
                             <button class="btn btn-secondary w-100 ">Search</button>
                         </div>
                     </div>
@@ -118,12 +118,12 @@
                 class="bg-primary color-secondary px-2 py-1 ">About</span> Us</h2>
 
         <div class="d-flex flex-wrap justify-content-between align-items-start pt-3">
-            <div class="col-4 text-center">
+            <div class="col-lg-4 col-12 text-center">
                 <img class="img-fluid" style="height: 300px" src="{{ asset('image/' . $about->image) }}"
                     alt="">
             </div>
-            <div class="col-7">
-                <h2 class="fw-bold">
+            <div class="col-lg-7 col-12">
+                <h2 class="fw-bold text-center text-lg-start">
                     @if (session('lang') == 'en')
                         {{ $about->title }}
                     @elseif (session('lang') == 'id')
@@ -135,7 +135,7 @@
 
                     @endif
                 </h2>
-                <h5>
+                <h5 class=" text-center text-lg-start">
                     @if (session('lang') == 'en')
                         {{ $about->subtitle }}
                     @elseif (session('lang') == 'id')
@@ -156,9 +156,9 @@
         <div class="mt-5 pt-3" style="position: relative;">
 
             <div style="position: absolute; bottom: 0; left: 0;" class="wave wave-1"></div>
-            <div style="position: absolute; bottom: 0; left: 0;" class="ship ship-1"></div>
+            <div style="position: absolute; bottom: 0; left: 0;" class="ship ship-1 d-lg-block d-none"></div>
             <div style="position: absolute; bottom: 0; left: 0;" class="wave wave-2"></div>
-            <div style="position: absolute; bottom: 0; left: 0;" class=" ship-2"></div>
+            <div style="position: absolute; bottom: 0; left: 0;" class=" ship-2 d-lg-block d-none"></div>
             <div style="position: absolute; bottom: 0; left: 0;" class="wave wave-3"></div>
         </div>
     </section>
@@ -178,27 +178,17 @@
         <div class="container">
             <div class="card shadow-sm border-0 mb-5" style="border-radius: 20px">
                 <div class="card-body">
-                    <h2 class="text-center mt-5 fw-bold color-primary mb-5"><span style="border-radius: 8px"
+                    <h2 class="text-center mt-5 fw-bold color-primary mb-2"><span style="border-radius: 8px"
                             class="bg-primary color-secondary px-2 py-1 ">Help</span> Centre</h2>
 
                     <div class="d-flex justify-content-between flex-wrap align-items-start">
-                        <div class="col-5 text-center">
+                        <div class="col-lg-5 col-12 text-center">
                             <img class="img-fluid w-75" src="{{ asset('image/faq.png') }}" alt="">
                         </div>
-                        <div class="col-7">
-                            <div class="card px-1  py-1"style="background-color: #F3F3F3;border-radius: 12px">
-                                <div class="d-flex  flex-wrap align-items-center">
-
-                                    <div class=" text-start ps-2">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </div>
-                                    <div class="col">
-                                        <input placeholder="Search for solution" type="text"
-                                            style="background-color: #F3F3F3" class="form-control border-0">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-lg-7 col-12">
+                            
                             <div class="div mt-2">
+                                
                                 @livewire('help-center')
                             </div>
                         </div>
@@ -213,11 +203,11 @@
             <h2 class="text-center  fw-bold color-primary mb-5">Contact <span style="border-radius: 8px"
                     class="bg-primary color-secondary px-2 py-1 ">Us</span></h2>
 
-            <div class="d-flex justify-content-between">
-                <div class="col-6 justify-content-start ">
+            <div class="d-flex justify-content-between flex-wrap">
+                <div class="col-lg-6 col-12 justify-content-start ">
                     @livewire('contact-us')
                 </div>
-                <div class="col-6 ps-3">
+                <div class="col-lg-6 col-12 ps-lg-3">
                     @livewire('message')
                 </div>
             </div>

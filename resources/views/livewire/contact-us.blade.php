@@ -2,7 +2,7 @@
     <div class="d-flex  flex-wrap">
 
         @foreach ($contact as $item)
-            <div class="col-12 pe-3">
+            <div class="col-12 pe-lg-3">
 
                 <a class="text-decoration-none text-black" href=" @if ($item->link != null) {{$item->link}} @endif">
 

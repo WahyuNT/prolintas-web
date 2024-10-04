@@ -1,4 +1,16 @@
 <div>
+    <div class="card px-1  mb-2 mt-2 py-1"style="background-color: #F3F3F3;border-radius: 12px">
+        <div class="d-flex  flex-wrap align-items-center">
+
+            <div class=" text-start ps-2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="col mt-2 mt-lg-0">
+                <input wire:model="search" placeholder="Search for solution" type="text" style="background-color: #F3F3F3"
+                    class="form-control border-0">
+            </div>
+        </div>
+    </div>
     @foreach ($faq as $item)
         <div class="accordion accordion-flush mb-2" id="accordionParent">
             <div class="accordion-item border border-2" style="border-radius: 12px">
