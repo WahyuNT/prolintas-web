@@ -20,7 +20,7 @@
              <ul id="sidebarnav " class="ps-0 pt-3">
 
                  <li class="sidebar-item mb-2">
-                     <a class="sidebar-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"
+                     <a class="sidebar-link text-decoration-none {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"
                          href="{{ route('admin.dashboard') }}" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>
@@ -29,7 +29,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item mb-2">
-                     <a class="sidebar-link {{ request()->routeIs('admin.services') ? 'active' : '' }}"
+                     <a class="sidebar-link text-decoration-none {{ request()->routeIs('admin.services') ? 'active' : '' }}"
                          href="{{ route('admin.services') }}" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>
@@ -38,7 +38,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item mb-2">
-                     <a class="sidebar-link {{ request()->routeIs('admin.news') ? 'active' : '' }}"
+                     <a class="sidebar-link text-decoration-none {{ request()->routeIs('admin.news') ? 'active' : '' }}"
                          href="{{ route('admin.news') }}" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>
@@ -47,7 +47,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item mb-2">
-                     <a class="sidebar-link {{ request()->routeIs('admin.faq') ? 'active' : '' }}"
+                     <a class="sidebar-link text-decoration-none {{ request()->routeIs('admin.faq') ? 'active' : '' }}"
                          href="{{ route('admin.faq') }}" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>
@@ -56,7 +56,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item mb-2">
-                     <a class="sidebar-link {{ request()->routeIs('admin.contact') ? 'active' : '' }}"
+                     <a class="sidebar-link text-decoration-none {{ request()->routeIs('admin.contact') ? 'active' : '' }}"
                          href="{{ route('admin.contact') }}" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>
@@ -65,7 +65,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item mb-2">
-                     <a class="sidebar-link {{ request()->routeIs('admin.account') ? 'active' : '' }}"
+                     <a class="sidebar-link text-decoration-none {{ request()->routeIs('admin.account') ? 'active' : '' }}"
                          href="{{ route('admin.account') }}" aria-expanded="false">
                          <span>
                              <i class="ti ti-mountain"></i>

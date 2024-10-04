@@ -26,8 +26,10 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/', fn() => view('pages.admin.index'))->name('admin.dashboard');
     Route::get('/services', fn() => view('pages.admin.services'))->name('admin.services');
-    Route::get('/news', fn() => view('pages.admin.news'))->name('admin.news');
     Route::get('/faq', fn() => view('pages.admin.faq'))->name('admin.faq');
     Route::get('/contact', fn() => view('pages.admin.contact'))->name('admin.contact');
     Route::get('/account', fn() => view('pages.admin.account'))->name('admin.account');
+    Route::get('/news', fn() => view('pages.admin.news.index'))->name('admin.news');
+    Route::get('/news/add', fn() => view('pages.admin.news.add'))->name('admin.news.add');
+    Route::get('/news/{id}/edit', fn($id) => view('pages.admin.news.edit', ['id' => $id]))->name('admin.news.edit');
 });
