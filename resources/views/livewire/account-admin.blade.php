@@ -29,7 +29,7 @@
                                 @foreach ($data as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                       
+
                                         <td>{{ $item->username }}</td>
                                         <td>{{ $item->email }}</td>
                                         <td>
@@ -93,13 +93,13 @@
                                         @enderror
                                     </div>
                                 </div>
-                                
-                          
-       
+
+
+
 
                                 <div class="d-flex justify-content-center">
 
-                                    <button wire:click="simpan" class="btn btn-primary">Simpan</button>
+                                    <button wire:click="simpan" class="btn btn-primary">Submit</button>
 
                                 </div>
                             </div>
@@ -142,11 +142,11 @@
                                 @enderror
                             </div>
                         </div>
-         
+
 
                         <div class="d-flex justify-content-center">
 
-                            <button wire:click="submitAdd" class="btn btn-primary">Simpan</button>
+                            <button wire:click="submitAdd" class="btn btn-primary">Submit</button>
 
                         </div>
                     </div>

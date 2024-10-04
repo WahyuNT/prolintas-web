@@ -15,7 +15,7 @@
                         @if ($edit == 'disabled')
                             <button wire:click="edit" class="btn btn-secondary">Edit</button>
                         @else
-                            <button wire:click="simpan" class="btn btn-primary">Simpan</button>
+                            <button wire:click="simpan" class="btn btn-primary">Submit</button>
                         @endif
                     </div>
                 </div>

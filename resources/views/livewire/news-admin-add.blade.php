@@ -37,7 +37,7 @@
                 @enderror
             </div>
             <div class="d-flex justify-content-center">
-                <button wire:click="submitAdd" class="btn btn-primary">Simpan</button>
+                <button wire:click="submitAdd" class="btn btn-primary">Submit</button>
             </div>
         </div>
 

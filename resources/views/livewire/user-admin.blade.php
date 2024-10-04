@@ -5,20 +5,20 @@
             <h3 class="text-center fw-bold color-primary">User Settings</h3>
         </div>
 
-       
+
 
 
     </div>
     <div class="div">
-       
+
         <div class="card-body">
             <div class="d-flex justify-content-between flex-wrap">
 
                 <div class="col-12">
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input required type="text" class="form-control" wire:model.defer="username"
-                            id="username" aria-emailribedby="usernamesection">
+                        <input required type="text" class="form-control" wire:model.defer="username" id="username"
+                            aria-emailribedby="usernamesection">
                         @error('username')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
@@ -50,7 +50,7 @@
 
                 <div class="d-flex justify-content-center">
 
-                    <button wire:click="submit" class="btn btn-primary">Simpan</button>
+                    <button wire:click="submit" class="btn btn-primary">Submit</button>
 
                 </div>
             </div>

@@ -24,20 +24,5 @@
             </div>
         </div>
     </div>
-    <div class="div">
-        <div class="accordion accordion-flush mb-2" id="accordionParent">
-            <div class="accordion-item border border-2" style="border-radius: 12px">
-                <h2 class="accordion-header">
-                    <button style="border-radius: 12px" class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#flush-2}" aria-expanded="false" aria-controls="flush-2}">
-                        2
-                    </button>
-                </h2>
-                <div id="flush-2}" class="accordion-collapse collapse" data-bs-parent="#accordionParent">
-                    <div class="accordion-body"> 2</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+ 
 @endsection

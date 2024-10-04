@@ -12,8 +12,8 @@
                 <div class="col-12">
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
-                        <input {{ $edit }} type="text" class="form-control" wire:model.defer="title" id="title"
-                            aria-describedby="titlesection">
+                        <input {{ $edit }} type="text" class="form-control" wire:model.defer="title"
+                            id="title" aria-describedby="titlesection">
                     </div>
                 </div>
                 <div class="col-12">
@@ -28,7 +28,7 @@
                 @if ($edit == 'disabled')
                     <button wire:click="edit" class="btn btn-secondary">Edit</button>
                 @else
-                    <button wire:click="simpan" class="btn btn-primary">Simpan</button>
+                    <button wire:click="simpan" class="btn btn-primary">Submit</button>
                 @endif
             </div>
         </div>

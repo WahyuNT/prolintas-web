@@ -98,7 +98,7 @@ class LoginController extends Controller
             // Coba membuat token menggunakan credentials yang diberikan
             if (!$token = JWTAuth::attempt($credentials)) {
 
-                return redirect('/login')->with('error', 'Email and password do not match.');
+                return redirect('/login')->with('error', 'Username and password do not match.');
             }
         } catch (JWTException $e) {
 

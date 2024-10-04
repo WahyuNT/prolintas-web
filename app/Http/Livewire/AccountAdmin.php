@@ -71,12 +71,12 @@ class AccountAdmin extends Component
 
 
         if ($post->save()) {
-            $this->alert('success', 'Data Berhasil Ditambahkan', [
+            $this->alert('success', 'Data has been successfully added.', [
                 'position' => 'center'
             ]);
             $this->back();
         } else {
-            $this->alert('error', 'Data Gagal Ditambahkan', [
+            $this->alert('error', 'Data failed to be added.', [
                 'position' => 'center'
             ]);
         }
@@ -112,10 +112,10 @@ class AccountAdmin extends Component
         $data->email = $this->email;
 
         if ($data->save()) {
-            $this->alert('success', 'Data berhasil diperbarui');
+            $this->alert('success', 'Data has been successfully updated.');
             $this->back();
         } else {
-            $this->alert('error', 'Data gagal diperbarui');
+            $this->alert('error', 'Data failed to update.');
         }
     }
     public function delete($id)

@@ -128,7 +128,7 @@
 
                                 </div>
                                 <input required wire:model="icon_baru" type="file" class="form-control">
-                                <div class="text-danger" wire:loading wire:target="icon_baru">  
+                                <div class="text-danger" wire:loading wire:target="icon_baru">
                                     Uploading...
                                 </div>
                                 @error('icon_baru')
@@ -137,7 +137,7 @@
                             </div>
                             <div class="d-flex justify-content-center">
 
-                                <button wire:click="simpan" class="btn btn-primary">Simpan</button>
+                                <button wire:click="simpan" class="btn btn-primary">Submit</button>
 
                             </div>
                         </div>
@@ -174,16 +174,16 @@
                         <label for="Gambar" class="form-label text-muted">Icon <small>(Max
                                 4MB)</small> </label>
                         <input required wire:model="nama_gambar" type="file" class="form-control">
-                        <div class="text-danger" wire:loading wire:target="nama_gambar">  
+                        <div class="text-danger" wire:loading wire:target="nama_gambar">
                             Uploading...
                         </div>
                         @error('nama_gambar')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="d-flex justify-content-center">
 
-                        <button wire:click="submitAdd" class="btn btn-primary">Simpan</button>
+                        <button wire:click="submitAdd" class="btn btn-primary">Submit</button>
 
                     </div>
                 </div>

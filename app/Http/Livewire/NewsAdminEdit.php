@@ -110,10 +110,10 @@ class NewsAdminEdit extends Component
         }
 
         if ($data->save()) {
-            $this->alert('success', 'Data berhasil diperbarui');
+            $this->alert('success', 'Data has been successfully updated.');
             return redirect()->route('admin.news');
         } else {
-            $this->alert('error', 'Data gagal diperbarui');
+            $this->alert('error', 'Data failed to update.');
         }
     }
 }

@@ -77,12 +77,12 @@ class ServicesAdmin extends Component
         }
 
         if ($post->save()) {
-            $this->alert('success', 'Data Berhasil Ditambahkan', [
+            $this->alert('success', 'Data has been successfully added.', [
                 'position' => 'center'
             ]);
             $this->back();
         } else {
-            $this->alert('error', 'Data Gagal Ditambahkan', [
+            $this->alert('error', 'Data failed to be added.', [
                 'position' => 'center'
             ]);
         }
@@ -139,10 +139,10 @@ class ServicesAdmin extends Component
         }
 
         if ($data->save()) {
-            $this->alert('success', 'Data berhasil diperbarui');
+            $this->alert('success', 'Data has been successfully updated.');
             $this->back();
         } else {
-            $this->alert('error', 'Data gagal diperbarui');
+            $this->alert('error', 'Data failed to update.');
         }
     }
     public function delete($id)
@@ -164,10 +164,10 @@ class ServicesAdmin extends Component
         $data = Services::where('id', $id)->first();
         $data->is_active = 1;
         if ($data->save()) {
-            $this->alert('success', 'Data berhasil diaktifkan');
+            $this->alert('success', 'Data has been successfully activated.');
             $this->back();
         } else {
-            $this->alert('error', 'Data gagal diaktifkan');
+            $this->alert('error', 'Data failed to be activated.');
         }
     }
     public function inactive($id)
@@ -178,10 +178,10 @@ class ServicesAdmin extends Component
 
 
         if ($data->save()) {
-            $this->alert('success', 'Data berhasil dinonaktifkan');
+            $this->alert('success', 'Data has been successfully deactivated.');
             $this->back();
         } else {
-            $this->alert('error', 'Data gagal dinonaktifkan');
+            $this->alert('error', 'Data failed to be deactivated.');
         }
     }
     public function deleteConfirm($id)

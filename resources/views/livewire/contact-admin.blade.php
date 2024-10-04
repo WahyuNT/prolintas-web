@@ -139,7 +139,8 @@
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label for="icon" class="form-label">Icon </label>
-                                        <small class="text-muted"> search icon in <a href="https://fontawesome.com">fontawesome.com</a> </small> 
+                                        <small class="text-muted"> search icon in <a
+                                                href="https://fontawesome.com">fontawesome.com</a> </small>
                                         <input required type="text" class="form-control" wire:model.defer="icon"
                                             id="icon" aria-describedby="titlesection">
                                         @error('icon')
@@ -160,7 +161,7 @@
 
                                 <div class="d-flex justify-content-center">
 
-                                    <button wire:click="simpan" class="btn btn-primary">Simpan</button>
+                                    <button wire:click="simpan" class="btn btn-primary">Submit</button>
 
                                 </div>
                             </div>
@@ -196,7 +197,8 @@
                         <div class="col-12">
                             <div class="mb-3">
                                 <label for="icon" class="form-label">Icon </label>
-                                <small class="text-muted"> search icon in <a href="https://fontawesome.com">fontawesome.com</a> </small> 
+                                <small class="text-muted"> search icon in <a
+                                        href="https://fontawesome.com">fontawesome.com</a> </small>
                                 <input required type="text" class="form-control" wire:model.defer="icon"
                                     id="icon" aria-describedby="titlesection">
                                 @error('icon')
@@ -217,7 +219,7 @@
 
                         <div class="d-flex justify-content-center">
 
-                            <button wire:click="submitAdd" class="btn btn-primary">Simpan</button>
+                            <button wire:click="submitAdd" class="btn btn-primary">Submit</button>
 
                         </div>
                     </div>

@@ -6,25 +6,24 @@ use App\Models\Landing;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
-class TitleAdmin extends Component
+class FooterAdmin extends Component
 {
     use LivewireAlert;
-    public $title;
     public $subtitle;
     public $edit = 'disabled';
     public $disabled = 'disabled';
 
+
     public function render()
     {
-        $title = Landing::where('type', 'home')->first();
-        $this->title = $title->title;
-        $this->subtitle = $title->subtitle;
-        $image = $title->image;
+        $data = Landing::where('type', 'footer')->first();
+        $this->subtitle = $data->subtitle;
+        $image = $data->image;
         $edit =  $this->edit;
 
-        return view('livewire.title-admin', compact('title', 'image', 'edit'));
-    }
 
+        return view('livewire.footer-admin', compact('data', 'image', 'edit'));
+    }
 
     public function edit()
     {
@@ -37,13 +36,12 @@ class TitleAdmin extends Component
     }
     public function simpan()
     {
-        $this->edit = 'disabled';
-        $title = Landing::where('type', 'home')->first();
-        $title->title = $this->title;
+        $title = Landing::where('type', 'footer')->first();
         $title->subtitle = $this->subtitle;
 
         if ($title->save()) {
             $this->alert('success', 'Data has been successfully updated.');
+            $this->edit = 'disabled';
         } else {
             $this->alert('error', 'Data failed to update.');
         }

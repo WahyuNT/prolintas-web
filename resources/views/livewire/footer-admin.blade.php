@@ -1,20 +1,13 @@
 <div>
     <div class="card border-0 shadow-sm borad-15">
         <div class="card-body">
-            <h5 class="fw-bold text-center">Title Page</h5>
+            <h5 class="fw-bold text-center">Footer</h5>
             <div class="d-flex justify-content-between flex-wrap">
                 <div class="col-12 mb-3">
 
                     <label for="image" class="form-label">Image</label><br>
                     <img class="img-fluid rounded" id="image" style="height: 120px"
                         src="{{ asset('image/' . $image) }}" alt="">
-                </div>
-                <div class="col-12">
-                    <div class="mb-3">
-                        <label for="title" class="form-label">Title</label>
-                        <input {{ $edit }} type="text" class="form-control" wire:model.defer="title"
-                            id="title" aria-describedby="titlesection">
-                    </div>
                 </div>
                 <div class="col-12">
                     <div class="mb-3">

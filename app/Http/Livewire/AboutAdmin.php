@@ -44,9 +44,9 @@ class AboutAdmin extends Component
         $title->subtitle = $this->subtitle;
 
         if ($title->save()) {
-            $this->alert('success', 'Data berhasil diperbarui');
+            $this->alert('success', 'Data has been successfully updated.');
         } else {
-            $this->alert('error', 'Data gagal diperbarui');
+            $this->alert('error', 'Data failed to update.');
         }
     }
 }
