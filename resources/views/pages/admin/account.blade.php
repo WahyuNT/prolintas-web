@@ -2,7 +2,8 @@
 @section('content')
     <div class="d-flex flex-wrap">
         <div class="col-12 ">
-            @livewire('contact-admin')
+            @livewire('account-admin')
         </div>
+       
     </div>
 @endsection

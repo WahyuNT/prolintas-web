@@ -12,7 +12,12 @@
 
         <div class="navbar-collapse justify-content-end px-0 container" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                <form action="{{route('logout')}}" method="post">
+                <a href="{{ route('admin.user') }}">
+
+                    <button type="submit" class="btn btn-primary me-2"><i
+                            class="fa-solid fa-user text-white"></i></button>
+                </a>
+                <form action="{{ route('logout') }}" method="post">
                     @csrf
                     <button type="submit" class="btn btn-danger">Log out</button>
                 </form>

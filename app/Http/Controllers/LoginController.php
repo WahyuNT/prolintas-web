@@ -71,10 +71,10 @@ class LoginController extends Controller
 
         if ($data->save()) {
 
-            return redirect('/login')->with('success', 'Registrasi Berhasil, Silahkan Login');
+            return redirect('/login')->with('success', 'Registration successful, please log in.');
         } else {
 
-            return redirect('/register')->with('error', 'Registrasi Gagal');
+            return redirect('/register')->with('error', 'Registration failed.');
         }
     }
 
@@ -98,11 +98,11 @@ class LoginController extends Controller
             // Coba membuat token menggunakan credentials yang diberikan
             if (!$token = JWTAuth::attempt($credentials)) {
 
-                return redirect('/login')->with('error', 'Email dan password tidak sesuai');
+                return redirect('/login')->with('error', 'Email and password do not match.');
             }
         } catch (JWTException $e) {
 
-            return redirect('/login')->with('error', 'Silahkan ulang kembali');
+            return redirect('/login')->with('error', 'Please try again.');
         }
 
         // Mengatur cookie dengan token JWT

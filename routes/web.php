@@ -28,6 +28,7 @@ Route::post('/loginStore', [LoginController::class, 'loginStore'])->name('login.
 Route::prefix('admin')->middleware(['auth'])->group(function () {
 
     Route::get('/', fn() => view('pages.admin.index'))->name('admin.dashboard');
+    Route::get('/user', fn() => view('pages.admin.user'))->name('admin.user');
     Route::get('/services', fn() => view('pages.admin.services'))->name('admin.services');
     Route::get('/faq', fn() => view('pages.admin.faq'))->name('admin.faq');
     Route::get('/contact', fn() => view('pages.admin.contact'))->name('admin.contact');

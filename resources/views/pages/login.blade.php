@@ -7,7 +7,11 @@
                     <form method="POST" action="{{ route('login.proses') }}">
                         @csrf
                         <div class="d-flex flex-column gap-2">
-
+                            @if (session('error'))
+                                <div class="alert alert-danger" role="alert">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
                             <h2 class="text-center">Login</h2>
                             <input class="form-control " required name="username" type="text" placeholder="Username">
                             <input class="form-control " required name="password" type="password" placeholder="Password">
