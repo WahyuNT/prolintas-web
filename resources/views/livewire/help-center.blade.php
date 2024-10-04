@@ -45,7 +45,7 @@
         </div>
     @endforeach
 
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mt-2">
         {{ $faq->links() }}
     </div>
 </div>
