@@ -59,7 +59,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     object-fit: cover;
-    height: 750px;
+    height: 800px;
 
     width: 100%;
 }
@@ -108,6 +108,7 @@ body {
     animation: wave 45s cubic-bezier(1, 1, 1, 1) infinite;
 
 }
+
 .ship-2 {
     background-repeat: no-repeat;
     background-size: 800px auto;

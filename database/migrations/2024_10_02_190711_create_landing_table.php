@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('icon', 288);
             $table->boolean('is_active');
             $table->text('maps_link');
-            $table->enum('type', ['home', 'about', 'maps'])->default('home');
+            $table->enum('type', ['home', 'about', 'maps', 'footer'])->default('home');
 
             $table->timestamps();
         });

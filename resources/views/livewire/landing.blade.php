@@ -1,6 +1,6 @@
 <div>
-    <section class="bg-section " style="background-image: url('{{ asset('image/bg1.png') }}')">
-        <div class="container h-100">
+    <section id="home" class="bg-section pt-5 " style="background-image: url('{{ asset('image/bg1.png') }}')">
+        <div class="container h-100 ">
             <div class="d-flex align-items-center justify-content-between h-75">
                 <div class="col-6 d-flex  flex-column">
                     <h1 class="text-white fw-bold">{{ $home->title }}</h1>
@@ -97,7 +97,7 @@
             </div>
         </div>
     </section>
-    <section class="pt-5 container" style="background-color: #FCFCFC">
+    <section id="about" class="pt-5 container" style="background-color: #FCFCFC">
         <h2 class="text-center mt-3 fw-bold color-primary mb-5"><span style="border-radius: 8px"
                 class="bg-primary color-secondary px-2 py-1 ">About</span> Us</h2>
 
@@ -129,7 +129,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="services">
         <div class="container pt-3 pb-5">
 
             <h2 class="text-center  fw-bold color-primary mb-5">Our <span style="border-radius: 8px"
@@ -140,7 +140,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="faq">
         <div class="container">
             <div class="card shadow-sm border-0 mb-5" style="border-radius: 20px">
                 <div class="card-body">
@@ -174,7 +174,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="contact"> 
         <div class="container pt-5 mb-5">
             <h2 class="text-center  fw-bold color-primary mb-5">Contact <span style="border-radius: 8px"
                     class="bg-primary color-secondary px-2 py-1 ">Us</span></h2>
@@ -195,45 +195,8 @@
         </div>
     </section>
 
-    <footer class="bg-primary">
-        <div class="d-flex justify-content-between container pt-5">
-            <div class="col-4 d-flex flex-column">
-                <img src="{{ asset('image/logo prolintas.png') }}" class="img-fluid"
-                    style="height: 81px ;width: 316px;" alt="">
-                <p class="text-white">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum sapiente modi, earum quod totam
-                    officia sunt iusto ipsum necessitatibus fugiat odit ipsam odio optio omnis, dolore vitae nam quia.
-                    Veritatis.
-                </p>
-            </div>
-            <div class="col-4 ps-5">
-                <div class="d-flex flex-column gap-1">
-                    <h5 class="fw-bold color-secondary">Our Services</h5>
-                    <h6 class="text-white">FCL & LCL Services</h6>
-                    <h6 class="text-white">Container Depot</h6>
-                    <h6 class="text-white">Logistics</h6>
-                    <h6 class="text-white">Air Cargo</h6>
-                    <h6 class="text-white">Warehouse</h6>
-                    <h6 class="text-white">Door-to-Door Service Delivery</h6>
-                    <h6 class="text-white">Customs Clearance</h6>
-                    <h6 class="text-white">Customs Broker</h6>
-                </div>
-            </div>
-            <div class="col-4 ps-5">
-                <div class="d-flex flex-column gap-1">
-                    <h5 class="fw-bold color-secondary">Contact Us</h5>
-                    <h6 class="text-white">Facebook</h6>
-                    <h6 class="text-white">Twitter</h6>
-                    <h6 class="text-white">Instagram</h6>
-                    <h6 class="text-white">YouTube</h6>
-                </div>
-            </div>
-        </div>
-        <div class="w-100 d-flex justify-content-center text-white py-3 mt-3" style="background-color: #161977">
-            © Copyright 2024
-        </div>
-    </footer>
-    <x-script />
+    @livewire('footer')
+
     <script>
         $('.owl-carousel').owlCarousel({
             loop: true,

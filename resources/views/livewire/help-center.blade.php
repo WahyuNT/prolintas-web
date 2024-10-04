@@ -1,6 +1,6 @@
 <div>
     @foreach ($faq as $item)
-        <div class="accordion accordion-flush mb-2" id="accordion{{ $item->id }}">
+        <div class="accordion accordion-flush mb-2" id="accordionParent">
             <div class="accordion-item border border-2" style="border-radius: 12px">
                 <h2 class="accordion-header">
                     <button style="border-radius: 12px" class="accordion-button collapsed" type="button"
@@ -10,12 +10,13 @@
                     </button>
                 </h2>
                 <div id="flush-{{ $item->id }}" class="accordion-collapse collapse"
-                    data-bs-parent="#accordion{{ $item->id }}">
+                    data-bs-parent="#accordionParent">
                     <div class="accordion-body"> {{ $item->desc }}</div>
                 </div>
             </div>
         </div>
     @endforeach
+  
     <div class="d-flex justify-content-center">
         {{ $faq->links() }}
     </div>

@@ -1,7 +1,8 @@
 <div>
     <div class="d-flex justify-content-start flex-wrap ">
+
         @forelse ($news as $item)
-            <div class="col-4 px-2">
+            <div class="col-4 px-2 mb-3">
                 <div class="card borad-15 border-0" style="position: relative">
                     <img class="borad-15" style="height: 200px; object-fit: cover;"
                         src="{{ asset('image/news/' . $item->image) }}" alt="">
