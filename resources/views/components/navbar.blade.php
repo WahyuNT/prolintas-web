@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg  bg-primary">
     <div class="container py-1">
-        <img class="logo-navbar me-2" src="{{ asset('image/logo prolintas.png') }}" alt="">
+        <a href="/">
+            <img class="logo-navbar me-2" src="{{ asset('image/logo prolintas.png') }}" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -18,6 +20,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link  text-header" aria-current="page" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-header" aria-current="page" href="{{ route('news') }}">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link  text-header" aria-current="page" href="#">English</a>

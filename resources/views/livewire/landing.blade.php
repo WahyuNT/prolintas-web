@@ -6,28 +6,34 @@
                     <h1 class="text-white fw-bold">{{ $home->title }}</h1>
                     <p class="text-white">{{ $home->subtitle }}</p>
                 </div>
-                <div class="col-6 ">
-                    <div class="owl-carousel">
-                        <div class="d-flex justify-content-end">
-                            <div class="col-9">
-                                <div class="card borad-15 border-0" style="position: relative">
-                                    <img class="borad-15"
-                                        src="https://blueraycargo.id/wp-content/uploads/2022/06/Kapal-Kargo-HMM-Algeciras.jpg"
-                                        alt="">
-                                    <div class="card card-overlay-carousel ">
-                                        <div class="d-flex justify-content-between align-items-center">
+                <div class="col-4 ">
+                    <div class="div">
+                        <div class="d-flex justify-content-between ">
+                            <div class="owl-carousel ">
+                                @forelse ($news as $item)
+                                    <div class="card borad-15 border-0" style="position: relative">
+                                        <img class="borad-15" style="height: 250px; object-fit: cover;"
+                                            src="{{ asset('image/news/' . $item->image) }}" alt="">
+                                        <div class="card card-overlay-carousel ">
+                                            <div class="d-flex justify-content-between align-items-center">
 
-                                            <div class="col-10">
-                                                <h6 class=" px-3 fw-bold">Lorem ipsum dolor sit amet consectetur
-                                                    adipisicing
-                                                    elit..</h6>
-                                            </div>
-                                            <div class="col-2">
-                                                <button class="btn btn-secondary">Detail</button>
+                                                <div class="col-10">
+                                                    <h6 class=" px-3 fw-bold">{{ $item->title }}</h6>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="{{ route('news.detail', ['id' => $item->id]) }}">
+
+                                                        <button class="btn btn-secondary">Detail</button>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+
+
+
+                                @empty
+                                @endforelse
 
                             </div>
                         </div>
@@ -178,7 +184,7 @@
                     @livewire('contact-us')
                 </div>
                 <div class="col-6 ps-3">
-                  @livewire('message')
+                    @livewire('message')
                 </div>
             </div>
             <div class="maps mt-5">
