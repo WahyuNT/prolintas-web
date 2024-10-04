@@ -1,4 +1,4 @@
 @extends('layouts.master')
 @section('content')
-@livewire('landing')
+    @livewire('landing')
 @endsection

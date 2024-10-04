@@ -108,7 +108,6 @@ class ServicesAdmin extends Component
         $this->add = '';
         $this->nama_gambar = '';
         $this->icon_baru = '';
-
     }
     public function simpan()
     {
@@ -121,7 +120,7 @@ class ServicesAdmin extends Component
         $data->title = $this->title;
         $data->desc = $this->desc;
 
-       
+
         $currentTimestamp = time();
         if ($this->icon_baru != null) {
             $this->validate([
@@ -145,7 +144,6 @@ class ServicesAdmin extends Component
         } else {
             $this->alert('error', 'Data gagal diperbarui');
         }
-       
     }
     public function delete($id)
     {
@@ -155,10 +153,10 @@ class ServicesAdmin extends Component
         }
 
         if ($data->delete()) {
-            $this->alert('success', 'Data berhasil dihapus');
+            $this->alert('success', 'Data has been successfully deleted.');
             $this->back();
         } else {
-            $this->alert('error', 'Data gagal dihapus');
+            $this->alert('error', 'Data failed to delete.');
         }
     }
     public function active($id)
@@ -177,7 +175,7 @@ class ServicesAdmin extends Component
         $data = Services::where('id', $id)->first();
         $data->is_active = 0;
 
-    
+
 
         if ($data->save()) {
             $this->alert('success', 'Data berhasil dinonaktifkan');

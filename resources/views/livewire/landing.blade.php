@@ -178,22 +178,7 @@
                     @livewire('contact-us')
                 </div>
                 <div class="col-6 ps-3">
-                    <div class="card h-100 shadow-sm border-0 borad-15">
-                        <div class="card-body">
-                            <h4 class="text-center fw-bold my-3">Send a Message</h4>
-                            <div class="d-flex flex-column gap-3 px-3">
-                                <input type="text" class="form-control" placeholder="Name">
-                                <input type="email" class="form-control" placeholder="Email">
-                                <textarea placeholder="Message" class="form-control" name="" id="" cols="2" rows="2"></textarea>
-                            </div>
-                            <div class="d-flex justify-content-center">
-
-                                <button class="btn btn-secondary mt-3">
-                                    Submit
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                  @livewire('message')
                 </div>
             </div>
             <div class="maps mt-5">

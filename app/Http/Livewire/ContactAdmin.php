@@ -142,10 +142,10 @@ class ContactAdmin extends Component
 
 
         if ($data->delete()) {
-            $this->alert('success', 'Data berhasil dihapus');
+            $this->alert('success', 'Data has been successfully deleted.');
             $this->back();
         } else {
-            $this->alert('error', 'Data gagal dihapus');
+            $this->alert('error', 'Data failed to delete.');
         }
     }
     public function active($id)
