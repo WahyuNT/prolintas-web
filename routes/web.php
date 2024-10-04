@@ -28,5 +28,6 @@ Route::prefix('admin')->group(function () {
     Route::get('/services', fn() => view('pages.admin.services'))->name('admin.services');
     Route::get('/news', fn() => view('pages.admin.news'))->name('admin.news');
     Route::get('/faq', fn() => view('pages.admin.faq'))->name('admin.faq');
+    Route::get('/contact', fn() => view('pages.admin.contact'))->name('admin.contact');
     Route::get('/account', fn() => view('pages.admin.account'))->name('admin.account');
 });

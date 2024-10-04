@@ -56,6 +56,15 @@
                      </a>
                  </li>
                  <li class="sidebar-item mb-2">
+                     <a class="sidebar-link {{ request()->routeIs('admin.contact') ? 'active' : '' }}"
+                         href="{{ route('admin.contact') }}" aria-expanded="false">
+                         <span>
+                             <i class="ti ti-mountain"></i>
+                         </span>
+                         <span class="hide-menu">Contact</span>
+                     </a>
+                 </li>
+                 <li class="sidebar-item mb-2">
                      <a class="sidebar-link {{ request()->routeIs('admin.account') ? 'active' : '' }}"
                          href="{{ route('admin.account') }}" aria-expanded="false">
                          <span>
