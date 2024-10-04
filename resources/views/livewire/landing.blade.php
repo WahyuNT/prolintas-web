@@ -1,5 +1,5 @@
 <div>
-    <section id="home" class="bg-section pt-5 " style="background-image: url('{{ asset('image/bg1.png') }}')">
+    <section id="home" class="bg-section pt-5 " style="background-image: url('{{ asset('image/' . $home->image) }}')">
         <div class="container h-100 ">
             <div class="d-flex align-items-center justify-content-between h-75">
                 <div class="col-6 d-flex  flex-column">
@@ -29,9 +29,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
                                 @empty
                                 @endforelse
 
@@ -174,7 +171,7 @@
         </div>
     </section>
 
-    <section id="contact"> 
+    <section id="contact">
         <div class="container pt-5 mb-5">
             <h2 class="text-center  fw-bold color-primary mb-5">Contact <span style="border-radius: 8px"
                     class="bg-primary color-secondary px-2 py-1 ">Us</span></h2>
@@ -197,12 +194,5 @@
 
     @livewire('footer')
 
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            items: 1
-        });
-    </script>
+ 
 </div>

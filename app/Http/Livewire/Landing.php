@@ -13,9 +13,9 @@ class Landing extends Component
         $home = ModelsLanding::where('type', 'home')->first();
         $about = ModelsLanding::where('type', 'about')->first();
         $maps = ModelsLanding::where('type', 'maps')->first();
-        $news = News::where('is_active', 1)
-            ->orderBy('created_at', 'desc')
-        ->paginate(5);
+        $news = News::all();
+     
+
 
         return view('livewire.landing', compact('home', 'about', 'maps', 'news'));
     }
