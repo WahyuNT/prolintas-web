@@ -20,7 +20,9 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Title</th>
+                                <th scope="col">Judul 🇮🇩</th>
                                 <th scope="col">Desc</th>
+                                <th scope="col">Deskripsi 🇮🇩</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Set</th>
                                 <th scope="col">Action</th>
@@ -31,7 +33,9 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->title }}</td>
+                                    <td>{{ $item->judul }}</td>
                                     <td>{{ $item->desc }}</td>
+                                    <td>{{ $item->deskripsi }}</td>
                                     <td>
                                         @if ($item->is_active)
                                             <span class="badge bg-success"><i class="fa-solid fa-eye"></i></span>
@@ -113,7 +117,33 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="judul" class="form-label">Judul <span class="text-muted">(Indonesia)</span></label>
+                                    <input required type="text" class="form-control" wire:model.defer="judul"
+                                        id="judul" aria-describedby="titlesection">
+                                    @error('judul')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="deskripsi" class="form-label">Deskripsi <span class="text-muted">(Indonesia)</span></label>
+                                    <input required type="text" class="form-control" wire:model.defer="deskripsi"
+                                        id="deskripsi" aria-describedby="titlesection">
+                                    @error('deskripsi')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2 ">
 
+                                <small class=" text-danger text-center ">Jika kolom indonesia kosong, akan otomatis
+                                    diisi
+                                    menggunakan bahasa
+                                    Inggris.</small>
+                            </div>
                             <div class="d-flex justify-content-center">
 
                                 <button wire:click="simpan" class="btn btn-primary">Submit</button>
@@ -148,6 +178,33 @@
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="judul" class="form-label">Judul <span class="text-muted">(Indonesia)</span></label>
+                            <input required type="text" class="form-control" wire:model.defer="judul"
+                                id="judul" aria-describedby="titlesection">
+                            @error('judul')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="deskripsi" class="form-label">Deskripsi <span class="text-muted">(Indonesia)</span></label>
+                            <input required type="text" class="form-control" wire:model.defer="deskripsi"
+                                id="deskripsi" aria-describedby="titlesection">
+                            @error('deskripsi')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-12 mb-2 ">
+
+                        <small class=" text-danger text-center ">Jika kolom indonesia kosong, akan otomatis
+                            diisi
+                            menggunakan bahasa
+                            Inggris.</small>
                     </div>
 
                     <div class="d-flex justify-content-center">

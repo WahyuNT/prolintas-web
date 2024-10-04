@@ -17,6 +17,8 @@ class FaqAdmin extends Component
     public $edit = '';
     public $add = null;
     public $confirmDelete = null;
+    public $judul;
+    public $deskripsi;
 
 
 
@@ -55,6 +57,8 @@ class FaqAdmin extends Component
             'title' => $this->title,
             'desc' => $this->desc,
             'is_active' => '1',
+            'judul' => $this->judul,
+            'deskripsi' => $this->deskripsi,
 
         ]);
 
@@ -86,6 +90,8 @@ class FaqAdmin extends Component
 
         $this->title = $data->title;
         $this->desc = $data->desc;
+        $this->judul = $data->judul;
+        $this->deskripsi = $data->deskripsi;
 
         $this->edit = $id;
     }
@@ -98,6 +104,8 @@ class FaqAdmin extends Component
 
         $this->edit = '';
         $this->add = '';
+        $this->judul = '';
+        $this->deskripsi = '';
     }
     public function simpan()
     {
@@ -109,7 +117,8 @@ class FaqAdmin extends Component
         $data = Faq::where('id', $this->edit)->first();
         $data->title = $this->title;
         $data->desc = $this->desc;
-
+        $data->judul = $this->judul;
+        $data->deskripsi = $this->deskripsi;
 
 
 

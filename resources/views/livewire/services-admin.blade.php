@@ -107,7 +107,7 @@
 
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="title" class="form-label">Title<span
+                                    <label for="title" class="form-label">Title<span class="text-danger">*</span><span
                                             class="text-danger">*</span></label>
                                     <input required type="text" class="form-control" wire:model.defer="title"
                                         id="title" aria-describedby="titlesection">
@@ -118,7 +118,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="desc" class="form-label">Description<span
+                                    <label for="desc" class="form-label">Description<span class="text-danger">*</span><span
                                             class="text-danger">*</span></label>
                                     <input required type="text" class="form-control" wire:model.defer="desc"
                                         id="desc" aria-describedby="titlesection">
