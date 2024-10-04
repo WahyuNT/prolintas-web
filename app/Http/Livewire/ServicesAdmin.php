@@ -21,6 +21,9 @@ class ServicesAdmin extends Component
     public $confirmDelete = null;
     public $nama_gambar;
     public $icon_baru;
+    public $judul;
+    public $deskripsi;
+    
 
 
     public function render()
@@ -31,6 +34,7 @@ class ServicesAdmin extends Component
         $confirmDelete = $this->confirmDelete;
         $icon = $this->icon;
         $title = $this->title;
+    
 
 
 
@@ -57,6 +61,8 @@ class ServicesAdmin extends Component
         $post = new Services([
             'title' => $this->title,
             'desc' => $this->desc,
+            'judul' => $this->judul,
+            'deskripsi' => $this->deskripsi,
             'is_active' => '1',
 
         ]);
@@ -96,6 +102,8 @@ class ServicesAdmin extends Component
         $this->desc = $data->desc;
         $this->icon = $data->icon;
         $this->edit = $id;
+        $this->judul = $data->judul;
+        $this->deskripsi = $data->deskripsi;
     }
 
 
@@ -108,6 +116,9 @@ class ServicesAdmin extends Component
         $this->add = '';
         $this->nama_gambar = '';
         $this->icon_baru = '';
+        $this->judul = '';
+        $this->deskripsi = '';
+
     }
     public function simpan()
     {
@@ -119,6 +130,9 @@ class ServicesAdmin extends Component
         $data = Services::where('id', $this->edit)->first();
         $data->title = $this->title;
         $data->desc = $this->desc;
+        $data->judul = $this->judul;
+        $data->deskripsi = $this->deskripsi;
+        
 
 
         $currentTimestamp = time();

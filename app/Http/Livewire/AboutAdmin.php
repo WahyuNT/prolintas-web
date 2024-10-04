@@ -27,8 +27,7 @@ class AboutAdmin extends Component
         $this->subtitle = $title->subtitle;
         $image = $title->image;
         $edit =  $this->edit;
-        $this->judul = $title->judul;
-        $this->subjudul = $title->subjudul;
+        
 
 
         return view('livewire.about-admin', compact('title', 'image', 'edit'));

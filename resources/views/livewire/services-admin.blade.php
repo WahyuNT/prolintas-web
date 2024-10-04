@@ -20,8 +20,10 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Icon</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Desc</th>
+                                <th scope="col">Title 🇬🇧</th>
+                                <th scope="col">Judul 🇮🇩</th>
+                                <th scope="col">Description 🇬🇧</th>
+                                <th scope="col">Deskripsi 🇮🇩</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Set</th>
                                 <th scope="col">Action</th>
@@ -39,7 +41,9 @@
                                         </div>
                                     </td>
                                     <td>{{ $item->title }}</td>
+                                    <td>{{ $item->judul }}</td>
                                     <td>{{ $item->desc }}</td>
+                                    <td>{{ $item->deskripsi }}</td>
                                     <td>
                                         @if ($item->is_active)
                                             <span class="badge bg-success"><i class="fa-solid fa-eye"></i></span>
@@ -103,7 +107,8 @@
 
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="title" class="form-label">Title</label>
+                                    <label for="title" class="form-label">Title<span
+                                            class="text-danger">*</span></label>
                                     <input required type="text" class="form-control" wire:model.defer="title"
                                         id="title" aria-describedby="titlesection">
                                     @error('title')
@@ -113,7 +118,8 @@
                             </div>
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="desc" class="form-label">Description</label>
+                                    <label for="desc" class="form-label">Description<span
+                                            class="text-danger">*</span></label>
                                     <input required type="text" class="form-control" wire:model.defer="desc"
                                         id="desc" aria-describedby="titlesection">
                                     @error('desc')
@@ -121,10 +127,31 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="judul" class="form-label">Judul <span class="text-muted">(Indonesia)</span></label>
+                                    <input required type="text" class="form-control" wire:model.defer="judul"
+                                        id="judul" aria-describedby="titlesection">
+                                    @error('judul')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="deskripsi" class="form-label">Deskripsi <span class="text-muted">(Indonesia)</span></label>
+                                    <input required type="text" class="form-control" wire:model.defer="deskripsi"
+                                        id="deskripsi" aria-describedby="titlesection">
+                                    @error('deskripsi')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
                             <div class="col-12 mb-3">
                                 <label for="image" class="form-label">Image</label><br>
                                 <div class="card bg-secondary text-center p-1 " style="height: 60px;width: 60px;">
-                                    <img class="img-fluid" src="{{ asset('image/services/' . $icon) }}" alt="">
+                                    <img class="img-fluid" src="{{ asset('image/services/' . $icon) }}"
+                                        alt="">
 
                                 </div>
                                 <input required wire:model="icon_baru" type="file" class="form-control">
@@ -134,6 +161,13 @@
                                 @error('icon_baru')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
+                            </div>
+                            <div class="col-12 mb-2 mt-2">
+
+                                <small class=" text-danger text-center ">Jika kolom indonesia kosong, akan otomatis
+                                    diisi
+                                    menggunakan bahasa
+                                    Inggris.</small>
                             </div>
                             <div class="d-flex justify-content-center">
 
@@ -152,9 +186,9 @@
 
                     <div class="col-12">
                         <div class="mb-3">
-                            <label for="title" class="form-label">Title</label>
-                            <input required type="text" class="form-control" wire:model.defer="title" id="title"
-                                aria-describedby="titlesection">
+                            <label for="title" class="form-label">Title<span class="text-danger">*</span></label>
+                            <input required type="text" class="form-control" wire:model.defer="title"
+                                id="title" aria-describedby="titlesection">
                             @error('title')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -162,7 +196,8 @@
                     </div>
                     <div class="col-12">
                         <div class="mb-3">
-                            <label for="desc" class="form-label">Description</label>
+                            <label for="desc" class="form-label">Description<span
+                                    class="text-danger">*</span></label>
                             <input required type="text" class="form-control" wire:model.defer="desc"
                                 id="desc" aria-describedby="titlesection">
                             @error('desc')
@@ -170,7 +205,29 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="col-12 mb-3">
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="judul" class="form-label">Judul<small class="text-muted">
+                                    (Indonesia)</small></label>
+                            <input required type="text" class="form-control" wire:model.defer="judul"
+                                id="judul" aria-describedby="titlesection">
+                            @error('judul')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="deskripsi" class="form-label">Deskripsi<small class="text-muted">
+                                    (Indonesia)</small></label>
+                            <input required type="text" class="form-control" wire:model.defer="deskripsi"
+                                id="deskripsi" aria-describedby="titlesection">
+                            @error('deskripsi')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-12 ">
                         <label for="Gambar" class="form-label text-muted">Icon <small>(Max
                                 4MB)</small> </label>
                         <input required wire:model="nama_gambar" type="file" class="form-control">
@@ -180,6 +237,12 @@
                         @error('nama_gambar')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
+                    </div>
+                    <div class="col-12 mb-2 mt-2">
+
+                        <small class=" text-danger text-center ">Jika kolom indonesia kosong, akan otomatis diisi
+                            menggunakan bahasa
+                            Inggris.</small>
                     </div>
                     <div class="d-flex justify-content-center">
 
