@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('desc')->nullable();
             $table->boolean('is_active')->default(1);
             $table->string('judul', 288)->nullable();
-            $table->string('deskripsi', 288)->nullable();
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }
