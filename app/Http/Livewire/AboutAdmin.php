@@ -3,17 +3,20 @@
 namespace App\Http\Livewire;
 
 use App\Models\Landing;
+use Illuminate\Support\Facades\Storage;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class AboutAdmin extends Component
 {
+    use WithFileUploads;
     use LivewireAlert;
     public $title;
     public $subtitle;
     public $edit = 'disabled';
     public $disabled = 'disabled';
-
+    public $image_baru;
 
     public function render()
     {
@@ -38,12 +41,32 @@ class AboutAdmin extends Component
     }
     public function simpan()
     {
-        $this->edit = 'disabled';
-        $title = Landing::where('type', 'about')->first();
-        $title->title = $this->title;
-        $title->subtitle = $this->subtitle;
+     
+        $data = Landing::where('type', 'about')->first();
+        $data->title = $this->title;
+        $data->subtitle = $this->subtitle;
 
-        if ($title->save()) {
+
+        $currentTimestamp = time();
+        if ($this->image_baru != null) {
+            $this->validate([
+                'image_baru' => 'mimes:png,jpg|max:4096', // 4MB Max
+            ]);
+
+            $gambarLama = $data->image;
+            if ($gambarLama && Storage::disk('real_public')->exists('image/' . $gambarLama)) {
+                Storage::disk('real_public')->delete('image/' . $gambarLama);
+            }
+
+
+            $fileNameimage = 'About' . '_' . $currentTimestamp . '.' . $this->image_baru->getClientOriginalExtension();
+            $filePath = $this->image_baru->storeAs(('image/'), $fileNameimage, 'real_public');
+            $data->image = $fileNameimage;
+        }
+
+
+        if ($data->save()) {
+            $this->edit = 'disabled';
             $this->alert('success', 'Data has been successfully updated.');
         } else {
             $this->alert('error', 'Data failed to update.');
