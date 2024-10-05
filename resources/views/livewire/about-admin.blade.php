@@ -3,17 +3,17 @@
         <div class="card-body">
             <h5 class="fw-bold text-center">About Us</h5>
             <div class="d-flex justify-content-between flex-wrap">
-                <div class="col-12 mb-3 d-flex justify-content-start align-items-center">
+                <div class="col-12 mb-3 d-flex justify-content-start align-items-center flex-wrap">
                     <div class="div">
 
                         <label for="image" class="form-label">Image</label><br>
                         <img class="img-fluid rounded" id="image" style="height: 120px"
                             src="{{ asset('image/' . $image) }}" alt="">
                     </div>
-                    <div class="col">
+                    <div class="div  ps-0 ps-lg-2">
 
                         @if ($edit != 'disabled')
-                            <div class="col mb-3">
+                            <div class="col mb-lg-3 mb-0 mt-2 mt-lg-0">
                                 <label for="Gambar" class="form-label ">New Image <small>(Max
                                         4MB)</small> </label><br>
 
