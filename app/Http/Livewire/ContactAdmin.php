@@ -33,7 +33,7 @@ class ContactAdmin extends Component
 
 
 
-        return view('livewire.Contact-admin', [
+        return view('livewire.contact-admin', [
             'data' => $data,
             'edit' => $edit,
             'confirmDelete' => $confirmDelete,
