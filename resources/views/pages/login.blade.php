@@ -17,7 +17,7 @@
                             <input class="form-control " required name="password" type="password" placeholder="Password">
                         </div>
                         <div class="d-flex justify-content-center mt-4">
-                            <button type="submit" class="btn btn-secondary">Submit</button>
+                            <button type="submit" class="btn btn-secondary">Login</button>
                         </div>
                     </form>
                 </div>
