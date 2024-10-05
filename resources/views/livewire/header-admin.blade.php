@@ -1,5 +1,5 @@
 <div>
-    <div class="card border-0 shadow-sm borad-15">
+    <div class="card border-0 shadow-sm borad-15" >
         <div class="card-body">
             <h5 class="fw-bold text-center">Header</h5>
             <div class="d-flex justify-content-between flex-wrap">

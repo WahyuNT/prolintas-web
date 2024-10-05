@@ -22,8 +22,8 @@ Route::get('/news', fn() => view('pages.news.index'))->name('news');
 Route::get('/news/{id}', fn($id) => view('pages.news.detail', ['id' => $id]))->name('news.detail');
 
 Route::get('login', [LoginController::class, 'loginPage'])->name('login');
-Route::get('register', [LoginController::class, 'registerPage'])->name('register');
-Route::post('/registerProses', [LoginController::class, 'registerProses'])->name('register.proses');
+// Route::get('register', [LoginController::class, 'registerPage'])->name('register');
+// Route::post('/registerProses', [LoginController::class, 'registerProses'])->name('register.proses');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('/loginStore', [LoginController::class, 'loginStore'])->name('login.proses');
 

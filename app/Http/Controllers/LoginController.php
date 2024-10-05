@@ -27,9 +27,17 @@ class LoginController extends Controller
 
         return view('pages.login');
     }
-    public function registerPage()
+    public function registerPage(Request $request)
     {
-        return view('pages.register');
+
+        $token = $request->bearerToken() ?? $request->cookie('token');
+        if ($token) {
+
+            return redirect()->route('admin.dashboard');
+        } else {
+            return view('pages.register');
+        }
+
     }
     public function login(Request $request)
     {

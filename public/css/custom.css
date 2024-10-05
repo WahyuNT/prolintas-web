@@ -50,6 +50,19 @@ body {
     color: var(--secondary-color) !important;
 }
 
+.text-header-admin {
+    color: white !important;
+}
+
+.text-header-admin.active {
+    font-weight: bold;
+    color: var(--secondary-color) !important;
+}
+
+.text-header-admin:hover {
+    color: var(--secondary-color) !important;
+}
+
 .logo-navbar {
     width: auto;
     height: 40px;

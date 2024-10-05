@@ -56,7 +56,7 @@ class HeaderAdmin extends Component
             }
 
 
-            $fileNameimage = 'About' . '_' . $currentTimestamp . '.' . $this->image_baru->getClientOriginalExtension();
+            $fileNameimage = 'header' . '_' . $currentTimestamp . '.' . $this->image_baru->getClientOriginalExtension();
             $filePath = $this->image_baru->storeAs(('image/'), $fileNameimage, 'real_public');
             $data->image = $fileNameimage;
         }
