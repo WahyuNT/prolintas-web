@@ -1,7 +1,7 @@
 <div>
     <div class="d-flex flex-wrap justify-content-center">
         @foreach ($services as $item)
-            <div class="col-lg-3 col-12 mb-4 px-3">
+            <div class="col-lg-3 col-12 col-md-6  mb-4 px-3">
                 <div class="card h-100 px-2 shadow-sm border-0" style="border-radius: 20px">
                     <div class="card-body py-4">
                         <div class="d-flex justify-content-center">

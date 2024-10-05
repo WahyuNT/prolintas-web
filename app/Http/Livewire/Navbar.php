@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 
 class Navbar extends Component
 {
+
+
     public function render(Request $request)
     {
-        if (!$request->session()->exists('lang')) {
-            Session::put('lang', 'en');
-        }
+      
 
         $data = Landing::where('type', 'header')->first();
 

@@ -1,23 +1,26 @@
 <div>
     <footer class="bg-primary">
-        <div class="d-flex justify-content-between container pt-5 flex-wrap-reverse">
-            <div class="col-4 col-12 d-flex flex-column mt-4 mt-lg-0">
-                <img src="{{ asset('image/' . $data->image) }}" class="img-fluid" style="height: 81px ;width: 316px;"
-                    alt="">
+        <div class="d-flex justify-content-between container pt-5 flex-wrap-reverse flex-lg-wrap">
+            <div class="col-lg-4 col-12 d-flex flex-column mt-4 mt-lg-0">
+                <div class="d-flex justify-content-center justify-content-lg-start">
+
+                    <img src="{{ asset('image/' . $data->image) }}" class="img-fluid" style="height: 81px ;width: 316px;"
+                        alt="">
+                </div>
                 <p class="text-white">
                     @if (session('lang') == 'en')
-                        <h6 class="text-white text-center text-lg-start">{{ $data->subtitle }}</h6>
+                        <p class="text-white text-center text-lg-start">{{ $data->subtitle }}</p>
                     @elseif (session('lang') == 'id')
                         @if ($data->subjudul != null)
-                            <h6 class="text-white text-center text-lg-start">{{ $data->subjudul }}</h6>
+                            <p class="text-white text-center text-lg-start">{{ $data->subjudul }}</p>
                         @else
-                            <h6 class="text-white text-center text-lg-start">{{ $data->subtitle }}</h6>
+                            <p class="text-white text-center text-lg-start">{{ $data->subtitle }}</p>
                         @endif
                     @endif
 
                 </p>
             </div>
-            <div class="col-4 col-6 ps-lg-5">
+            <div class="col-lg-4 col-6 ps-lg-5">
                 <div class="d-flex flex-column gap-1">
                     <h5 class="fw-bold color-secondary text-start text-lg-start">Our Services</h5>
                     @forelse ($service as $item)
@@ -27,7 +30,7 @@
 
                 </div>
             </div>
-            <div class="col-4 col-6 ps-lg-5">
+            <div class="col-lg-4 col-6 ps-lg-5">
                 <div class="d-flex flex-column gap-1">
                     <h5 class="fw-bold color-secondary text-end text-lg-start">Contact Us</h5>
                     @forelse ($contact as $item)
@@ -44,7 +47,7 @@
             </div>
         </div>
         <div class="w-100 d-flex justify-content-center text-white py-3 mt-3" style="background-color: #161977">
-            © Copyright 2024
+            © Copyright {{ date('Y') }}
         </div>
     </footer>
 </div>
