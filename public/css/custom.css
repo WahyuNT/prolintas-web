@@ -235,11 +235,6 @@ body {
     height: auto;
     z-index: 2;
 
-    @media screen and (max-width: 1000px) {
-        width: 250%;
-        height: auto;
-
-    }
 }
 
 .img-wave {
@@ -257,3 +252,4 @@ body {
         
     }
 }
+

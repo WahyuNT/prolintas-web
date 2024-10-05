@@ -58,15 +58,9 @@
             </div>
         </div>
     </section>
-    <div style="position: relative">
+    <div style="position: relative;">
         <div class="wave-landing">
-            <img class="img-wave " src="{{ asset('image/WaveA.png') }}" alt="">
-        </div>
-        <div class="wave-landing">
-            <img class="img-wave " src="{{ asset('image/WaveB.png') }}" alt="">
-        </div>
-        <div class="wave-landing">
-            <img class="img-wave" src="{{ asset('image/WaveC.png') }}" alt="">
+            <img class="img-wave " src="{{ asset('image/waveOne.png') }}" alt="">
         </div>
     </div>
 
