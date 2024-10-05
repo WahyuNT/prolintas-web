@@ -36,6 +36,10 @@ body {
     color: white !important;
     background-color: var(--secondary-color) !important;
 }
+.btn{
+    border-radius: 8px !important;
+    border: 0px;
+}
 
 .text-header {
     color: white !important;
