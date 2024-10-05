@@ -9,8 +9,8 @@
 
     </div>
     <div class=" border-0 mt-2 borad-15">
-        <div class="card-body">
-            <table class="table table-bor   dered">
+        <div class="card-body table-responsive">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">No</th>

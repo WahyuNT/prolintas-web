@@ -13,7 +13,7 @@
 
     </div>
     <div class=" border-0 mt-2 borad-15">
-        <div class="card-body">
+        <div class="card-body table-responsive">
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -30,7 +30,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>
-                                <img style="height: 90px" class="img-fluid"
+                                <img class="img-fluid img-news-table"
                                     src="{{ asset('image/news/' . $item->image) }}" alt="">
                             </td>
                             <td>{{ $item->title }}</td>

@@ -232,3 +232,11 @@ body {
 
   
 }
+.img-news-table{
+    height: 90px !important;
+
+    @media screen and (max-width: 1200px) {
+        height: auto !important;
+        
+    }
+}
