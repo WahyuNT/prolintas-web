@@ -72,20 +72,25 @@
 
                     <h2 class="text-primary fw-bold text-lg-start text-center">Cek Resi</h2>
                     <div class="card-body px-0 d-flex justify-content-between flex-wrap">
-                        <div class="col-lg-10 col-12 border border-1" style="border-radius: 10px">
-
-                            <div class=" d-flex justify-content-between flex-wrap">
-                                <div class="col-10  ps-1">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12 border border-1" style="border-radius: 10px">
+                            <div class=" d-flex justify-content-between flex-wrap w-100">
+                                <div class="col-10   ps-1">
                                     <input placeholder="Please enter your waybill number." type="text"
                                         class="form-control border-0 ">
                                 </div>
-                                <div class="col-2 text-lg-end text-center">
+                                <div class="col-2  text-lg-end text-center">
                                     <button class="btn"><i class="fa-solid fa-trash"></i></button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col text-end ps-lg-3 mt-3 mt-lg-0">
-                            <button disabled class="btn btn-secondary w-100 ">Search</button>
+                        <div class="col-12 mt-2">
+
+                            <div class="div d-flex justify-content-center   mt-lg-0">
+
+
+                                <button disabled class="btn btn-secondary w-100 ">Search</button>
+
+                            </div>
                         </div>
                     </div>
                 </div>
