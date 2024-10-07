@@ -6,13 +6,16 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="col mt-2 mt-lg-0">
-                <input wire:model="search" placeholder="Search for solution" type="text" style="background-color: #F3F3F3"
-                    class="form-control border-0">
+                <input wire:model="search"
+                    @if (session('lang') == 'en') placeholder="Search for solution" @elseif (session('lang') == 'id') placeholder="Cari Solusi" @endif
+                    style="background-color: #F3F3F3" class="form-control border-0">
             </div>
         </div>
     </div>
+
+
     @foreach ($faq as $item)
-        <div class="accordion accordion-flush mb-2" id="accordionParent">
+        <div class="accordion accordion-flush mb-2" id="accordionParent" data-aos="fade-left">
             <div class="accordion-item border border-2" style="border-radius: 12px">
                 <h2 class="accordion-header">
                     <button style="border-radius: 12px" class="accordion-button collapsed" type="button"

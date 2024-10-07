@@ -1,6 +1,7 @@
 <x-style />
 
 <body style="background-color: #FBFBFB">
+
     @include('sweetalert::alert')
     <x-navbar />
 

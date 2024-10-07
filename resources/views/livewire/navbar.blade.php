@@ -1,6 +1,6 @@
 <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary w-100" style="position: fixed;z-index:999999">
-        <div class="container py-1">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary w-100" style="position: fixed;z-index:9999">
+        <div class="container container-fluid  py-1">
             <a href="/">
                 <img class="logo-navbar me-2" src="{{ asset('image/' . $data->image) }}" alt="">
             </a>

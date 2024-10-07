@@ -1,6 +1,6 @@
 <div>
     <footer class="bg-primary">
-        <div class="d-flex justify-content-between container pt-5 flex-wrap-reverse flex-lg-wrap">
+        <div class="d-flex justify-content-between container container-fluid  pt-5 flex-wrap-reverse flex-lg-wrap">
             <div class="col-lg-4 col-12 d-flex flex-column mt-4 mt-lg-0">
                 <div class="d-flex justify-content-center justify-content-lg-start">
 

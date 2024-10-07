@@ -10,7 +10,7 @@
 
         </ul>
 
-        <div class="navbar-collapse justify-content-end px-0 container" id="navbarNav">
+        <div class="navbar-collapse justify-content-end px-0 container container-fluid " id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
                 <a href="{{ route('admin.user') }}">
 
@@ -34,7 +34,7 @@
 
 <div class="d-block d-lg-none">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary w-100" style="position: fixed;z-index:999999">
-        <div class="container py-1">
+        <div class="container container-fluid  py-1">
             @php
                 use App\Models\Landing;
                 $data = Landing::where('type', 'header')->first();
@@ -94,7 +94,7 @@
                         <a href="/" class="btn btn-secondary">Homepage</a>
                     </div>
                     <div class="div">
-                     
+
                         <form action="{{ route('logout') }}" method="post">
                             @csrf
                             <button type="submit" class="btn btn-danger">Log out</button>

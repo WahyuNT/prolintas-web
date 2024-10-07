@@ -15,10 +15,50 @@
 
 
 <script>
-    $('.owl-carousel').owlCarousel({
+    $('.owl-one').owlCarousel({
+        loop: true,
+        margin: 10,
+        items: 1
+    });
+    $('.owl-two').owlCarousel({
         loop: true,
         margin: 10,
         nav: false,
-        items: 1
+        dots: true,
+        items: 2,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
     });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated');
+                    entry.target.style.opacity = 1; // mengatur opacity agar elemen terlihat
+                }
+            });
+        });
+
+        let elements = document.querySelectorAll('.animate_element');
+        elements.forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>

@@ -1,33 +1,39 @@
 <div>
     <section id="home" class="bg-section pt-5 " style="background-image: url('{{ asset('image/' . $home->image) }}')">
-        <div class="container h-100 ">
+        <div class="container-x container  h-100 ">
             <div class="d-flex align-items-center justify-content-center justify-content-lg-between h-75 flex-wrap">
-                <div class="col-lg-6  col-12 d-flex mt-5 mt-lg-0 flex-column text-center text-lg-start">
+                <div class="col-lg-6  col-12 d-flex mt-5 mt-lg-0 flex-column text-center text-lg-start ">
+                    <div class="animate__animated animate__fadeInDown animate__delay-0-5s">
 
-                    @if (session('lang') == 'en')
-                        <h1 class="text-white fw-bold">{{ $home->title }}</h1>
-                    @elseif (session('lang') == 'id')
-                        @if ($home->judul != null)
-                            <h1 class="text-white fw-bold">{{ $home->judul }}</h1>
-                        @else
-                            <h1 class="text-white fw-bold">{{ $home->title }}</h1>
+                        @if (session('lang') == 'en')
+                            <h1 class="text-white fw-bold  ">
+                                {{ $home->title }}</h1>
+                        @elseif (session('lang') == 'id')
+                            @if ($home->judul != null)
+                                <h1 class="text-white fw-bold">{{ $home->judul }}</h1>
+                            @else
+                                <h1 class="text-white fw-bold">{{ $home->title }}</h1>
+                            @endif
                         @endif
-                    @endif
-                    @if (session('lang') == 'en')
-                        <p class="text-white">{{ $home->subtitle }}</p>
-                    @elseif (session('lang') == 'id')
-                        @if ($home->subjudul != null)
-                            <p class="text-white">{{ $home->subjudul }}</p>
-                        @else
+                    </div>
+                    <div class="animate__animated animate__fadeInUp animate__delay-0-5s">
+
+                        @if (session('lang') == 'en')
                             <p class="text-white">{{ $home->subtitle }}</p>
+                        @elseif (session('lang') == 'id')
+                            @if ($home->subjudul != null)
+                                <p class="text-white">{{ $home->subjudul }}</p>
+                            @else
+                                <p class="text-white">{{ $home->subtitle }}</p>
+                            @endif
                         @endif
-
-                    @endif
+                    </div>
                 </div>
                 <div class="col-lg-4 col-12 col-md-8 ">
                     <div class="div">
-                        <div class="d-flex justify-content-between ">
-                            <div class="owl-carousel ">
+                        <div
+                            class="d-flex justify-content-between  animate__animated animate__pulse animate__fadeInRight animate__delay-0-5s">
+                            <div class="owl-one owl-carousel  ">
                                 @forelse ($news as $item)
                                     <div class="card borad-15 border-0" style="position: relative">
                                         <img class="borad-15 " style="height: 250px; object-fit: cover;"
@@ -66,8 +72,8 @@
 
 
     <section class="py-5" style="background: linear-gradient(360deg, #FCFCFC 0%, #F8F8F8 100%)">
-        <div class="d-flex justify-content-center py-5 container">
-            <div class="col-lg-6 col-12 py-5">
+        <div class="d-flex justify-content-center py-5 container-x container ">
+            <div class="col-lg-6 col-12 py-5 " data-aos="zoom-out-up">
                 <div class="card shadow-sm pt-4 pb-3 px-4 border-0" style="border-radius: 15px">
 
                     <h2 class="text-primary fw-bold text-lg-start text-center">Cek Resi</h2>
@@ -97,8 +103,13 @@
             </div>
         </div>
     </section>
-    <section id="about" class="pt-5 container" style="background-color: #FCFCFC">
-        <div class="mt-3 mb-3">
+    <section>
+        <div class="div">
+            @livewire('wave-gallery')
+        </div>
+    </section>
+    <section id="about" class="pt-5 container-x container " style="background-color: #FCFCFC">
+        <div class="mt-3 mb-3" data-aos="fade-down">
 
             <h1 class="text-center d-block d-lg-none  fw-bold color-primary "><span style="border-radius: 8px"
                     class="bg-primary color-secondary px-2 py-1 ">About</span> Us</h1>
@@ -108,9 +119,10 @@
 
         <div class="d-flex flex-wrap justify-content-between align-items-start pt-3">
             <div class="col-lg-4 col-12 text-center">
-                <img class="img-fluid img-about" src="{{ asset('image/' . $about->image) }}" alt="">
+                <img data-aos="fade-right" class="img-fluid img-about" src="{{ asset('image/' . $about->image) }}"
+                    alt="">
             </div>
-            <div class="col-lg-7 col-12">
+            <div class="col-lg-7 col-12 " data-aos="fade-left">
                 <h2 class="fw-bold text-center text-lg-start">
                     @if (session('lang') == 'en')
                         {{ $about->title }}
@@ -152,30 +164,34 @@
     </section>
 
     <section id="services">
-        <div class="container pt-3 pb-5">
-            <div class="div mb-3">
+        <div class="container-x container  pt-3 pb-5">
+            <div class="div mb-5" data-aos="zoom-in-up">
 
                 <h2 class="text-center d-block d-lg-none fw-bold color-primary ">Our <span style="border-radius: 8px"
                         class="bg-primary color-secondary px-2 py-1 ">Services</span></h2>
                 <h2 class="text-center d-none d-lg-block fw-bold color-primary ">Our <span style="border-radius: 8px"
                         class="bg-primary color-secondary px-2 py-1 ">Services</span></h2>
             </div>
+            <div class="div">
 
-            @livewire('our-services')
+                @livewire('our-services')
+            </div>
 
         </div>
     </section>
 
     <section id="faq">
-        <div class="container">
+        <div class="container-x container ">
             <div class="card shadow-sm border-0 mb-5" style="border-radius: 20px">
                 <div class="card-body">
-                    <h2 class="text-center mt-5 fw-bold color-primary mb-2"><span style="border-radius: 8px"
-                            class="bg-primary color-secondary px-2 py-1 ">Help</span> Centre</h2>
+                    <h2 data-aos="zoom-out" class="text-center mt-5 fw-bold color-primary mb-2"><span
+                            style="border-radius: 8px" class="bg-primary color-secondary px-2 py-1 ">Help</span>
+                        Centre</h2>
 
                     <div class="d-flex justify-content-between flex-wrap align-items-start">
                         <div class="col-lg-5 col-12 text-center">
-                            <img class="img-fluid w-75" src="{{ asset('image/faq.png') }}" alt="">
+                            <img data-aos="zoom-in-right" class="img-fluid w-75" src="{{ asset('image/faq.png') }}"
+                                alt="">
                         </div>
                         <div class="col-lg-7 col-12">
 
@@ -191,9 +207,9 @@
     </section>
 
     <section id="contact">
-        <div class="container pt-5 mb-5">
-            <h2 class="text-center  fw-bold color-primary mb-5">Contact <span style="border-radius: 8px"
-                    class="bg-primary color-secondary px-2 py-1 ">Us</span></h2>
+        <div class="container-x container  pt-5 mb-5">
+            <h2 data-aos="zoom-out-down" class="text-center  fw-bold color-primary mb-5">Contact <span
+                    style="border-radius: 8px" class="bg-primary color-secondary px-2 py-1 ">Us</span></h2>
 
             <div class="d-flex justify-content-between flex-wrap">
                 <div class="col-lg-6 col-12 justify-content-start ">
@@ -203,10 +219,25 @@
                     @livewire('message')
                 </div>
             </div>
-            <div class="maps mt-5">
-                <iframe class="borad-15" src="{{ $maps->maps_link }}" width="100%" height="450"
-                    style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="col-12 d-flex justify-content-between flex-wrap">
+
+                <div class=" col-lg-6 col-12 pe-lg-2">
+                    <div class="maps mt-4" data-aos="fade-up">
+                        <h5 class="fw-bold">Cabang </h5>
+                        <iframe class="borad-15" src="{{ $maps->maps_link }}" width="100%" height="450"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class=" col-lg-6 col-12 ps-lg-2">
+
+                    <div class="maps mt-4" data-aos="fade-up">
+                        <h5 class="fw-bold">Cabang </h5>
+                        <iframe class="borad-15" src="{{ $maps->maps_link }}" width="100%" height="450"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

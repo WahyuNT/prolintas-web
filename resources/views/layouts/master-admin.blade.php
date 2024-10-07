@@ -11,7 +11,7 @@
         <div class="body-wrapper">
             <x-admin_header />
 
-            <div class="container-fluid">
+            <div class="container container-fluid -fluid">
                 @yield('content')
 
 

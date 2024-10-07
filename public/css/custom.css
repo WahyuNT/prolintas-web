@@ -6,7 +6,8 @@
 }
 
 body {
-    /* font-family: 'Roboto', sans-serif !important; */
+    font-family: 'Roboto', sans-serif !important;
+    overflow-x: hidden
 }
 
 .color-primary {
@@ -191,11 +192,11 @@ body {
 }
 
 .borad-20 {
-    border-radius: 20px;
+    border-radius: 20px !important;
 }
 
 .borad-15 {
-    border-radius: 15px;
+    border-radius: 15px !important;
 }
 
 .card-overlay-carousel {
@@ -280,9 +281,29 @@ body {
 
     }
 }
+
 .float:hover {
     background-color: #19ac4f;
     color: #FFF;
     width: 51px;
     height: 51px;
+}
+
+.img-gallery {
+    height: 125px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+
+    @media screen and (max-width: 1200px) {
+        height: 150px !important;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+}
+.container-x{
+    overflow-x: hidden
 }

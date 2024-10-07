@@ -1,7 +1,12 @@
 <div>
-    <div class="card h-100 shadow-sm border-0 borad-15">
+    <div class="card h-100 shadow-sm border-0 borad-15" data-aos="fade-left">
         <div class="card-body">
+            @if (session('lang') == 'en')
             <h4 class="text-center fw-bold my-3">Send a Message</h4>
+            @elseif (session('lang') == 'id')
+            <h4 class="text-center fw-bold my-3">Kirim Pesan</h4>
+            @endif
+           
             <div class="d-flex flex-column gap-3 px-3">
                 <input wire:model="name" type="text" class="form-control" placeholder="Name">
                 @error('name')
@@ -20,7 +25,11 @@
             <div class="d-flex justify-content-center">
                 <div class="div">
                     <button type="button" wire:click="submit" class="btn btn-secondary mt-3">
-                        Submit
+                        @if (session('lang') == 'en')
+                            Send
+                        @elseif (session('lang') == 'id')
+                            Kirim
+                        @endif
                     </button>
                 </div>
             </div>

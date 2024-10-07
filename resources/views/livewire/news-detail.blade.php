@@ -1,6 +1,7 @@
 <div>
 
-    <div class="container col-lg-6 col-md-10 col-12 d-flex justify-content-center flex-column mb-5 pt-3">
+    <div
+        class="container container-fluid  col-lg-6 col-md-10 col-12 d-flex justify-content-center flex-column mb-5 pt-3">
 
 
         <h2 class="text-center text-black fw-bold my-3 pt-5">
