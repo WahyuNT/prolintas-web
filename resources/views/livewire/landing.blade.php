@@ -73,7 +73,7 @@
 
     <section class="py-5" style="background: linear-gradient(360deg, #FCFCFC 0%, #F8F8F8 100%)">
         <div class="d-flex justify-content-center py-5 container-x container ">
-            <div class="col-lg-6 col-12 py-5 " data-aos="zoom-out-up">
+            <div class="col-lg-6 col-12 py-5 " data-aos="zoom-in-down">
                 <div class="card shadow-sm pt-4 pb-3 px-4 border-0" style="border-radius: 15px">
 
                     <h2 class="text-primary fw-bold text-lg-start text-center">Cek Resi</h2>
