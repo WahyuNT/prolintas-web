@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="div ps-2">
-                            <h5 class="fw-bold color-primary">
+                            <h5 class="fw-bold color-primary mb-1">
 
                                 @if (session('lang') == 'en')
                                     {{ $item->title }}

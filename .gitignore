@@ -16,3 +16,4 @@ yarn-error.log
 public/image/news/*
 public/image/services/*
 vendor.zip
+public/image/gallery/*

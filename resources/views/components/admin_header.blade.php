@@ -77,6 +77,10 @@
                             aria-current="page" href="{{ route('admin.contact') }}">Contact</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-center text-lg-start {{ request()->routeIs('admin.gallery') ? 'active' : '' }} text-header-admin"
+                            aria-current="page" href="{{ route('admin.gallery') }}">Gallery</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-center text-lg-start {{ request()->routeIs('admin.messages') ? 'active' : '' }} text-header-admin"
                             aria-current="page" href="{{ route('admin.messages') }}">Messages</a>
                     </li>

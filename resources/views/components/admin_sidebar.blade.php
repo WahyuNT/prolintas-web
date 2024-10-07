@@ -68,6 +68,15 @@
                      </a>
                  </li>
                  <li class="sidebar-item mb-2">
+                     <a class="sidebar-link text-decoration-none {{ request()->routeIs('admin.gallery') ? 'active' : '' }}"
+                         href="{{ route('admin.gallery') }}" aria-expanded="false">
+                         <span>
+                             <i class="ti ti-mountain"></i>
+                         </span>
+                         <span class="hide-menu">Gallery</span>
+                     </a>
+                 </li>
+                 <li class="sidebar-item mb-2">
                      <a class="sidebar-link text-decoration-none {{ request()->routeIs('admin.messages') ? 'active' : '' }}"
                          href="{{ route('admin.messages') }}" aria-expanded="false">
                          <span>

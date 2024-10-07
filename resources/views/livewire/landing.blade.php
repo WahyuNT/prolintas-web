@@ -219,11 +219,11 @@
                     @livewire('message')
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-between flex-wrap">
+            <div class="col-12 d-flex justify-content-between flex-wrap" >
 
                 <div class=" col-lg-6 col-12 pe-lg-2">
-                    <div class="maps mt-4" data-aos="fade-up">
-                        <h5 class="fw-bold">Cabang </h5>
+                    <div class="maps mt-4" >
+                        <h5 class="fw-bold text-center">{{ $maps->title }}</h5>
                         <iframe class="borad-15" src="{{ $maps->maps_link }}" width="100%" height="450"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -231,9 +231,9 @@
                 </div>
                 <div class=" col-lg-6 col-12 ps-lg-2">
 
-                    <div class="maps mt-4" data-aos="fade-up">
-                        <h5 class="fw-bold">Cabang </h5>
-                        <iframe class="borad-15" src="{{ $maps->maps_link }}" width="100%" height="450"
+                    <div class="maps mt-4" >
+                        <h5 class="fw-bold text-center">{{ $maps2->title }}</h5>
+                        <iframe class="borad-15" src="{{ $maps2->maps_link }}" width="100%" height="450"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

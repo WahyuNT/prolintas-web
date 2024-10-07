@@ -13,9 +13,12 @@
         <div class="col-12 col-lg-6 ps-2">
             @livewire('footer-admin')
         </div>
-       
-        <div class="col-12 ps-2">
+
+        <div class="col-12 col-lg-6 ps-2">
             @livewire('maps-admin')
+        </div>
+        <div class="col-12 col-lg-6 ps-2">
+            @livewire('maps2-admin')
         </div>
     </div>
 @endsection

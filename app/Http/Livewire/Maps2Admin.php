@@ -6,9 +6,8 @@ use App\Models\Landing;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
-class MapsAdmin extends Component
+class Maps2Admin extends Component
 {
-
     use LivewireAlert;
     public $maps;
     public $title;
@@ -18,14 +17,14 @@ class MapsAdmin extends Component
 
     public function render()
     {
-        $data = Landing::where('type', 'maps')->first();
+        $data = Landing::where('type', 'maps2')->first();
         $maps = $data->maps_link;
         $title = $data->title;
         $this->maps = $maps;
         $this->title = $title;
 
 
-        return view('livewire.maps-admin', compact('data', 'maps', 'title'));
+        return view('livewire.maps2-admin', compact('data', 'maps', 'title'));
     }
 
 
@@ -41,7 +40,7 @@ class MapsAdmin extends Component
     public function simpan()
     {
         $this->edit = 'disabled';
-        $data = Landing::where('type', 'maps')->first();
+        $data = Landing::where('type', 'maps2')->first();
         $data->title = $this->title;
 
         $iframeTag = $this->maps;
