@@ -3,7 +3,7 @@
         <div class="d-flex justify-content-between mt-3">
             <div class="div">
 
-                <h3 class="text-center fw-bold color-primary">Contact</h3>
+                <h3 class="text-center fw-bold color-primary">Account</h3>
             </div>
             <div class="div">
                 @if ($add != 'add' && $edit == null)
@@ -21,6 +21,7 @@
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">Username</th>
+                                    <th scope="col">Role</th>
                                     <th scope="col">E-Mail</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -31,26 +32,38 @@
                                         <td>{{ $loop->iteration }}</td>
 
                                         <td>{{ $item->username }}</td>
+                                        <td>
+                                            @if ($item->role == 'super_admin')
+                                                Super Admin
+                                            @else
+                                                Admin
+                                            @endif
+                                        </td>
                                         <td>{{ $item->email }}</td>
                                         <td>
-                                            @if ($confirmDelete == $item->id)
-                                                <span class="text-center mb-1">Are you sure?</span>
-                                                <div class="d-flex justify-content-start gap-1">
+                                            @if ($myId != $item->id)
+                                                @if ($confirmDelete == $item->id)
+                                                    <span class="text-center mb-1">Are you sure?</span>
+                                                    <div class="d-flex justify-content-start gap-1">
 
-                                                    <button wire:click="cancelDelete()"
-                                                        class="btn btn-secondary btn-sm">Batal</button>
-                                                    <button wire:click="delete({{ $item->id }})"
-                                                        class="btn btn-danger btn-sm">Delete</button>
-                                                </div>
+                                                        <button wire:click="cancelDelete()"
+                                                            class="btn btn-secondary btn-sm">Batal</button>
+                                                        <button wire:click="delete({{ $item->id }})"
+                                                            class="btn btn-danger btn-sm">Delete</button>
+                                                    </div>
+                                                @else
+                                                    <div class="d-flex justify-content-start gap-1">
+
+                                                        <button wire:click="edit({{ $item->id }})"
+                                                            class="btn btn-primary btn-sm">Edit</button>
+                                                        <button wire:click="deleteConfirm({{ $item->id }})"
+                                                            class="btn btn-danger btn-sm">Delete</button>
+                                                    </div>
+                                                @endif
                                             @else
-                                                <div class="d-flex justify-content-start gap-1">
-
-                                                    <button wire:click="edit({{ $item->id }})"
-                                                        class="btn btn-primary btn-sm">Edit</button>
-                                                    <button wire:click="deleteConfirm({{ $item->id }})"
-                                                        class="btn btn-danger btn-sm">Delete</button>
-                                                </div>
+                                                <small class="bg-primary rounded-pill text-white px-2 py-1 ">You</small>
                                             @endif
+
                                         </td>
                                     </tr>
                                 @endforeach
@@ -79,6 +92,20 @@
                                         <input required type="text" class="form-control" wire:model.defer="username"
                                             id="username" aria-emailribedby="usernamesection">
                                         @error('username')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="role" class="form-label">Role</label>
+                                        <select wire:model="role" class="form-select" aria-label="Default select example">
+                                            <option selected>Select Role</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="super_admin">Super Admin</option>
+
+                                        </select>
+                                        @error('role')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
@@ -114,7 +141,7 @@
 
                         <div class="col-12">
                             <div class="mb-3">
-                                <label for="username" class="form-label">username</label>
+                                <label for="username" class="form-label">Username</label>
                                 <input required type="text" class="form-control" wire:model.defer="username"
                                     id="username" aria-emailribedby="usernamesection">
                                 @error('username')
@@ -142,7 +169,20 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="role" class="form-label">Role</label>
+                                <select wire:model="role" class="form-select" aria-label="Default select example">
+                                    <option selected>Select Role</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="super_admin">Super Admin</option>
 
+                                </select>
+                                @error('role')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="d-flex justify-content-center">
 

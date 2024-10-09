@@ -6,6 +6,7 @@ use App\Models\Contact;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class ContactAdmin extends Component
 {
@@ -15,6 +16,7 @@ class ContactAdmin extends Component
     public $desc;
     public $icon;
     public $link;
+    public $role;
 
     public $edit = '';
     public $add = null;
@@ -24,6 +26,8 @@ class ContactAdmin extends Component
 
     public function render()
     {
+
+
         $data = Contact::all();
         $edit = $this->edit;
         $add = $this->add;

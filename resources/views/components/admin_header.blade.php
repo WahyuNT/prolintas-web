@@ -84,10 +84,17 @@
                         <a class="nav-link text-center text-lg-start {{ request()->routeIs('admin.messages') ? 'active' : '' }} text-header-admin"
                             aria-current="page" href="{{ route('admin.messages') }}">Messages</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-center text-lg-start {{ request()->routeIs('admin.account') ? 'active' : '' }} text-header-admin"
-                            aria-current="page" href="{{ route('admin.account') }}">Account</a>
-                    </li>
+                    @php
+                        use Tymon\JWTAuth\Facades\JWTAuth;
+                        $user = JWTAuth::toUser(JWTAuth::getToken());
+
+                    @endphp
+                    @if ($user->role == 'super_admin')
+                        <li class="nav-item">
+                            <a class="nav-link text-center text-lg-start {{ request()->routeIs('admin.account') ? 'active' : '' }} text-header-admin"
+                                aria-current="page" href="{{ route('admin.account') }}">Account</a>
+                        </li>
+                    @endif
 
 
                 </ul>

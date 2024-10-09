@@ -6,6 +6,7 @@ use App\Models\User;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class AccountAdmin extends Component
 {
@@ -13,22 +14,38 @@ class AccountAdmin extends Component
     use WithFileUploads;
     public $username;
     public $email;
+    public $role;
     public $password;
 
     public $edit = '';
     public $add = null;
     public $confirmDelete = null;
+    public $myrole;
+    public $myId;
 
 
+    public function mount()
+    {
+        $userid = JWTAuth::toUser(JWTAuth::getToken());
+        $this->myrole = $userid->role;
+        $this->myId = $userid->id;
+
+        if ($this->myrole != 'super_admin') {
+            return redirect()->route('admin.dashboard');
+        }
+    }
 
     public function render()
     {
+
+
         $data = User::all();
         $edit = $this->edit;
         $add = $this->add;
         $confirmDelete = $this->confirmDelete;
-
+        $myId = $this->myId;
         $username = $this->username;
+
 
 
 
@@ -37,7 +54,8 @@ class AccountAdmin extends Component
             'edit' => $edit,
             'confirmDelete' => $confirmDelete,
             'add' => $add,
-            'username' => $username
+            'username' => $username,
+            'myId' => $myId
         ]);
     }
 
@@ -47,6 +65,7 @@ class AccountAdmin extends Component
         $this->add = 'add';
         $this->username = '';
         $this->email = '';
+        $this->role = '';
         $this->password = '';
     }
     public function submitAdd()
@@ -55,6 +74,7 @@ class AccountAdmin extends Component
         $post = new User([
             'username' => $this->username,
             'email' => $this->email,
+            'role' => $this->role,
             'password' => bcrypt($this->password),
 
         ]);
@@ -64,6 +84,7 @@ class AccountAdmin extends Component
         $this->validate([
 
             'username' => 'required',
+            'role' => 'required',
             'email' => 'required|email',
             'password' => 'required',
         ]);
@@ -87,6 +108,7 @@ class AccountAdmin extends Component
         $data = User::where('id', $id)->first();
 
         $this->username = $data->username;
+        $this->role = $data->role;
         $this->email = $data->email;
         $this->edit = $id;
     }
@@ -104,11 +126,13 @@ class AccountAdmin extends Component
     {
         $this->validate([
             'username' => 'required',
+            'role' => 'required',
             'email' => 'required|email',
         ]);
 
         $data = User::where('id', $this->edit)->first();
         $data->username = $this->username;
+        $data->role = $this->role;
         $data->email = $this->email;
 
         if ($data->save()) {

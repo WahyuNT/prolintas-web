@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg  bg-white shadow-sm ">
+
     <div class="container container-fluid  py-1">
         <img class="logo-navbar me-2" src="{{ asset('image/logo prolintas.png') }}" alt="">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
