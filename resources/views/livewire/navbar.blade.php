@@ -49,7 +49,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-center text-lg-start  text-header" aria-current="page"
                             href="{{ route('index') }}#faq">Help
-                            Centre</a>
+                            Center</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-center text-lg-start  text-header" aria-current="page"

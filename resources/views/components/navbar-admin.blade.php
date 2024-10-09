@@ -14,7 +14,7 @@
                     <a class="nav-link  text-header" aria-current="page" href="#">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-header" aria-current="page" href="#">Help Centre</a>
+                    <a class="nav-link  text-header" aria-current="page" href="#">Help Center</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link  text-header" aria-current="page" href="#">Contact Us</a>

@@ -104,7 +104,7 @@
         </div>
     </section>
     <section>
-        <div class="div">
+        <div class="div mb-3 mb-lg-5">
             @livewire('wave-gallery')
         </div>
     </section>
@@ -185,9 +185,9 @@
             <div class="card shadow-sm border-0 mb-5" style="border-radius: 20px">
                 <div class="card-body">
                     <h1 class="text-center d-block d-lg-none  fw-bold color-primary "><span style="border-radius: 8px"
-                            class="bg-primary color-secondary px-2 py-1 ">Help</span> Centre</h1>
+                            class="bg-primary color-secondary px-2 py-1 ">Help</span> Center</h1>
                     <h2 class="text-center d-none d-lg-block  fw-bold color-primary "><span style="border-radius: 8px"
-                            class="bg-primary color-secondary px-2 py-1 ">Help</span> Centre</h2>
+                            class="bg-primary color-secondary px-2 py-1 ">Help</span> Center</h2>
 
                     <div class="d-flex justify-content-between flex-wrap align-items-start">
                         <div class="col-lg-5 col-12 text-center">
