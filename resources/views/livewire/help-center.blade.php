@@ -13,9 +13,9 @@
         </div>
     </div>
 
-    @forelse ($faq as $item)
-        <div e class="accordion accordion-flush mb-2" id="accordionParent">
-            <div class="accordion-item border border-2" style="border-radius: 12px">
+    <div class="accordion accordion-flush " id="accordionParent">
+        @forelse ($faq as $item)
+            <div class="accordion-item border mb-2 border-2" data-aos="fade-left" style="border-radius: 12px">
                 <h2 class="accordion-header">
                     <button style="border-radius: 12px" class="accordion-button collapsed" type="button"
                         data-bs-toggle="collapse" data-bs-target="#flush-{{ $item->id }}" aria-expanded="false"
@@ -44,15 +44,17 @@
                     @endif
                 </div>
             </div>
-        </div>
-    @empty
-        <div class="alert alert-warning" role="alert">
-            @if (session('lang') == 'en')
-                No data found
-            @elseif (session('lang') == 'id')
-                Data tidak ditemukan
-            @endif
-    @endforelse
+
+        @empty
+            <div class="alert alert-warning" role="alert">
+                @if (session('lang') == 'en')
+                    No solution found
+                @elseif (session('lang') == 'id')
+                    Solusi tidak ditemukan
+                @endif
+            </div>
+        @endforelse
+    </div>
 
     <div class="d-flex justify-content-center mt-2">
         {{ $faq->links() }}
