@@ -26,6 +26,7 @@
         nav: false,
         dots: false,
         items: 2,
+        autoplay: true,
         responsive: {
             0: {
                 items: 1
