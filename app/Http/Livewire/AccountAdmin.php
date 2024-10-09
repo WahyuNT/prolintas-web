@@ -83,9 +83,9 @@ class AccountAdmin extends Component
 
         $this->validate([
 
-            'username' => 'required',
+            'username' => 'required|unique:users,username',
             'role' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required',
         ]);
 
