@@ -13,9 +13,8 @@
         </div>
     </div>
 
-
-    @foreach ($faq as $item)
-        <div class="accordion accordion-flush mb-2" id="accordionParent" data-aos="fade-left">
+    @forelse ($faq as $item)
+        <div e class="accordion accordion-flush mb-2" id="accordionParent">
             <div class="accordion-item border border-2" style="border-radius: 12px">
                 <h2 class="accordion-header">
                     <button style="border-radius: 12px" class="accordion-button collapsed" type="button"
@@ -46,7 +45,14 @@
                 </div>
             </div>
         </div>
-    @endforeach
+    @empty
+        <div class="alert alert-warning" role="alert">
+            @if (session('lang') == 'en')
+                No data found
+            @elseif (session('lang') == 'id')
+                Data tidak ditemukan
+            @endif
+    @endforelse
 
     <div class="d-flex justify-content-center mt-2">
         {{ $faq->links() }}

@@ -119,8 +119,8 @@
 
         <div class="d-flex flex-wrap justify-content-between align-items-start pt-3">
             <div class="col-lg-4 col-12 text-center">
-                <img data-aos="fade-right" class="img-fluid img-about" src="{{ asset('image/' . $about->image) }}"
-                    alt="">
+                <img data-aos="fade-right" class="img-fluid img-about rounded-pill mb-3 mb-lg-0"
+                    style="aspect-ratio:1/1" src="{{ asset('image/' . $about->image) }}" alt="">
             </div>
             <div class="col-lg-7 col-12 " data-aos="fade-left">
                 <h2 class="fw-bold text-center text-lg-start">
@@ -184,14 +184,15 @@
         <div class="container-x container ">
             <div class="card shadow-sm border-0 mb-5" style="border-radius: 20px">
                 <div class="card-body">
-                    <h2 data-aos="zoom-out" class="text-center mt-5 fw-bold color-primary mb-2"><span
-                            style="border-radius: 8px" class="bg-primary color-secondary px-2 py-1 ">Help</span>
-                        Centre</h2>
+                    <h1 class="text-center d-block d-lg-none  fw-bold color-primary "><span style="border-radius: 8px"
+                            class="bg-primary color-secondary px-2 py-1 ">Help</span> Centre</h1>
+                    <h2 class="text-center d-none d-lg-block  fw-bold color-primary "><span style="border-radius: 8px"
+                            class="bg-primary color-secondary px-2 py-1 ">Help</span> Centre</h2>
 
                     <div class="d-flex justify-content-between flex-wrap align-items-start">
                         <div class="col-lg-5 col-12 text-center">
-                            <img data-aos="zoom-in-right" class="img-fluid w-75" src="{{ asset('image/faq.png') }}"
-                                alt="">
+                            <img data-aos="zoom-in-right" class="img-fluid w-75 rounded"
+                                src="{{ asset('image/' . $faq->image) }}" alt="">
                         </div>
                         <div class="col-lg-7 col-12">
 
@@ -219,10 +220,10 @@
                     @livewire('message')
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-between flex-wrap" >
+            <div class="col-12 d-flex justify-content-between flex-wrap">
 
                 <div class=" col-lg-6 col-12 pe-lg-2">
-                    <div class="maps mt-4" >
+                    <div class="maps mt-4">
                         <h5 class="fw-bold text-center">{{ $maps->title }}</h5>
                         <iframe class="borad-15" src="{{ $maps->maps_link }}" width="100%" height="450"
                             style="border:0;" allowfullscreen="" loading="lazy"
@@ -231,7 +232,7 @@
                 </div>
                 <div class=" col-lg-6 col-12 ps-lg-2">
 
-                    <div class="maps mt-4" >
+                    <div class="maps mt-4">
                         <h5 class="fw-bold text-center">{{ $maps2->title }}</h5>
                         <iframe class="borad-15" src="{{ $maps2->maps_link }}" width="100%" height="450"
                             style="border:0;" allowfullscreen="" loading="lazy"

@@ -22,10 +22,11 @@ class Landing extends Component
         $about = ModelsLanding::where('type', 'about')->first();
         $maps = ModelsLanding::where('type', 'maps')->first();
         $maps2 = ModelsLanding::where('type', 'maps2')->first();
+        $faq = ModelsLanding::where('type', 'faq')->first();
         $news = News::all();
 
 
 
-        return view('livewire.landing', compact('home', 'about', 'maps', 'news', 'maps2'));
+        return view('livewire.landing', compact('home', 'about', 'maps', 'news', 'maps2', 'faq'));
     }
 }

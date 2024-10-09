@@ -15,11 +15,14 @@ class HelpCenter extends Component
     public function render()
     {
         $faq = Faq::where('is_active', 1)
-            ->where('title', 'like', '%' . $this->search . '%')
-            ->orWhere('desc', 'like', '%' . $this->search . '%')
-            ->orWhere('judul', 'like', '%' . $this->search . '%')
-            ->orWhere('deskripsi', 'like', '%' . $this->search . '%')
+            ->when($this->search, function ($query) {
+                $query->where('title', 'like', '%' . $this->search . '%')
+                    ->orWhere('desc', 'like', '%' . $this->search . '%')
+                    ->orWhere('judul', 'like', '%' . $this->search . '%')
+                    ->orWhere('deskripsi', 'like', '%' . $this->search . '%');
+            })
             ->paginate(5);
+
 
         return view('livewire.help-center', compact('faq'));
     }

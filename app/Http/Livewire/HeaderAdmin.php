@@ -16,6 +16,7 @@ class HeaderAdmin extends Component
     public $edit = 'disabled';
     public $disabled = 'disabled';
     public $image_baru;
+    public $image_baru_faq;
 
     public function render()
     {
@@ -25,9 +26,11 @@ class HeaderAdmin extends Component
         $image = $data->image;
         $edit =  $this->edit;
 
+        $dataFaq = Landing::where('type', 'faq')->first();
+        $imageFAQ = $dataFaq->image;
 
 
-        return view('livewire.header-admin', compact('data', 'image', 'edit'));
+        return view('livewire.header-admin', compact('data', 'image', 'edit', 'dataFaq', 'imageFAQ'));
     }
 
     public function edit()
@@ -41,13 +44,16 @@ class HeaderAdmin extends Component
     }
     public function simpan()
     {
+   
         $data = Landing::where('type', 'header')->first();
         $data->subtitle = $this->subtitle;
+
+        $dataFaq = Landing::where('type', 'faq')->first();
 
         $currentTimestamp = time();
         if ($this->image_baru != null) {
             $this->validate([
-                'image_baru' => 'mimes:png,jpg|max:4096', // 4MB Max
+                'image_baru' => 'mimes:png,jpg,gif|max:4096', // 4MB Max
             ]);
 
             $gambarLama = $data->image;
@@ -60,10 +66,26 @@ class HeaderAdmin extends Component
             $filePath = $this->image_baru->storeAs(('image/'), $fileNameimage, 'real_public');
             $data->image = $fileNameimage;
         }
+        if ($this->image_baru_faq != null) {
+            $this->validate([
+                'image_baru_faq' => 'mimes:png,jpg,gif|max:4096', // 4MB Max
+            ]);
+
+            $gambarLamaFaq = $dataFaq->image;
+            if ($gambarLamaFaq && Storage::disk('real_public')->exists('image/' . $gambarLamaFaq)) {
+                Storage::disk('real_public')->delete('image/' . $gambarLamaFaq);
+            }
+
+
+            $fileNameimageFaq = 'faq' . '_' . $currentTimestamp . '.' . $this->image_baru_faq->getClientOriginalExtension();
+            $filePathFaq = $this->image_baru_faq->storeAs(('image/'), $fileNameimageFaq, 'real_public');
+            $dataFaq->image = $fileNameimageFaq;
+        }
 
 
 
-        if ($data->save()) {
+        if ($data->save() && $dataFaq->save()) {
+
             $this->alert('success', 'Data has been successfully updated.');
             $this->edit = 'disabled';
         } else {

@@ -27,7 +27,7 @@ class AboutAdmin extends Component
         $this->subtitle = $title->subtitle;
         $image = $title->image;
         $edit =  $this->edit;
-        
+
 
 
         return view('livewire.about-admin', compact('title', 'image', 'edit'));
@@ -44,7 +44,7 @@ class AboutAdmin extends Component
     }
     public function simpan()
     {
-     
+
         $data = Landing::where('type', 'about')->first();
         $data->title = $this->title;
         $data->subtitle = $this->subtitle;
@@ -55,7 +55,7 @@ class AboutAdmin extends Component
         $currentTimestamp = time();
         if ($this->image_baru != null) {
             $this->validate([
-                'image_baru' => 'mimes:png,jpg|max:4096', // 4MB Max
+                'image_baru' => 'mimes:png,jpg,gif|max:4096', // 4MB Max
             ]);
 
             $gambarLama = $data->image;
